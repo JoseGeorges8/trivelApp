@@ -73,10 +73,34 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/button11"
+                        android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Button" />
+                        android:text="Email Us" />
+
+                    <Button
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Our Location" />
+
+                    <Button
+                        android:id="@+id/call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Call Us" />
+
+                    <Button
+                        android:id="@+id/web"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Website" />
+
+                    <Button
+                        android:id="@+id/calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calendar" />
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>

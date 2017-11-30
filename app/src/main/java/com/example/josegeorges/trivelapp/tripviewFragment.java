@@ -1,9 +1,11 @@
 package com.example.josegeorges.trivelapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.SupportActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -86,6 +88,12 @@ public class tripviewFragment extends Fragment {
         spec.setContent(R.id.contact);
         spec.setIndicator("Contact");
         host.addTab(spec);
+
+        Button email = (Button) view.findViewById(R.id.email);
+        Button map = (Button) view.findViewById(R.id.map);
+        Button phone = (Button) view.findViewById(R.id.call);
+        Button web = (Button) view.findViewById(R.id.web);
+        Button cal = (Button) view.findViewById(R.id.calendar);
 
 
         return view;
