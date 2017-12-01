@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.josegeorges.trivelapp.PackagesFragment">
 
-
+    <!-- adding the recyclerView to the fragment-->
+    <include layout="@layout/recycler_view"/>
 
 </FrameLayout>
