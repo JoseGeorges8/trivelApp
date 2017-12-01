@@ -40,6 +40,8 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
         holder.getPackageTitle().setText(list.get(position).getTitle());
         holder.getPackageDescription().setText(list.get(position).getDescription());
         holder.getPackagePrice().setText(list.get(position).getPrice());
+
+
     }
 
     @Override

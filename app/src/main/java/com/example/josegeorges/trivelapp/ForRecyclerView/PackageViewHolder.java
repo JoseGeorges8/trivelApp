@@ -1,8 +1,10 @@
 package com.example.josegeorges.trivelapp.ForRecyclerView;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.josegeorges.trivelapp.R;
@@ -24,6 +26,7 @@ public class PackageViewHolder extends RecyclerView.ViewHolder {
     private TextView packagePrice;
     private TextView packageDescription;
 
+    private RelativeLayout tripPackage;
 
     public PackageViewHolder(View itemView) {
         super(itemView);
@@ -31,6 +34,20 @@ public class PackageViewHolder extends RecyclerView.ViewHolder {
         packageTitle = (TextView) itemView.findViewById(R.id.package_title);
         packagePrice = (TextView) itemView.findViewById(R.id.package_price);
         packageDescription = (TextView) itemView.findViewById(R.id.package_description);
+
+        /*
+        * I made a setOnClickListener for the relativeLayout to simulate when an item is pressed. I made it this way
+        * because we only need to press the item just once and this way makes it easy.
+        * */
+        tripPackage = (RelativeLayout) itemView.findViewById(R.id.tripPackage);
+        tripPackage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(packageTitle != null){
+                    Log.d("JOSE", packageTitle.getText().toString() + " was pressed");
+                }
+            }
+        });
     }
 
 
