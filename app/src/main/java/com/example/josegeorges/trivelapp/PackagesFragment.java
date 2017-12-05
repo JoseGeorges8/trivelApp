@@ -78,10 +78,13 @@ public class PackagesFragment extends Fragment {
         populatePackages();
         //making sure that everything is set up first
         if (tripPackages.size() > 0 & recyclerView != null) {
-            recyclerView.setAdapter(new PackageAdapter(tripPackages));
+            recyclerView.setAdapter(new PackageAdapter(tripPackages, (MainActivity) this.getActivity()));
         }
         recyclerView.setLayoutManager(myLayoutManager);
+
     }
+
+
 
     /*
     * This method is momentary to test the recyclerView and make sure everything is working.

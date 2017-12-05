@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.josegeorges.trivelapp.MainActivity;
 import com.example.josegeorges.trivelapp.R;
 import com.example.josegeorges.trivelapp.TripPackage;
 
@@ -20,17 +21,19 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
 
     //array of packages going to te recyclerView
     private ArrayList<TripPackage> list;
+    private MainActivity activity;
 
     //constructor
-    public PackageAdapter(ArrayList<TripPackage> list) {
+    public PackageAdapter(ArrayList<TripPackage> list, MainActivity activity) {
         this.list = list;
+        this.activity = activity;
     }
 
     @Override
     public PackageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.packages_items, parent, false);
-        PackageViewHolder holder = new PackageViewHolder(view);
+        PackageViewHolder holder = new PackageViewHolder(view, activity);
         return holder;
     }
 
@@ -40,8 +43,6 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
         holder.getPackageTitle().setText(list.get(position).getTitle());
         holder.getPackageDescription().setText(list.get(position).getDescription());
         holder.getPackagePrice().setText(list.get(position).getPrice());
-
-
     }
 
     @Override
