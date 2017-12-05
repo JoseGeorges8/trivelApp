@@ -19,7 +19,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         PackagesFragment.OnFragmentInteractionListener,
-        tripviewFragment.OnFragmentInteractionListener{
+        TripViewFragment.OnFragmentInteractionListener{
 
     FragmentManager fm;
 

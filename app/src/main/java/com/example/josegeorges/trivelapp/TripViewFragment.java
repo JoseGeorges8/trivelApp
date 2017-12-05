@@ -1,29 +1,25 @@
 package com.example.josegeorges.trivelapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.SupportActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TabHost;
-import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link tripviewFragment.OnFragmentInteractionListener} interface
+ * {@link TripViewFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link tripviewFragment#newInstance} factory method to
+ * Use the {@link TripViewFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class tripviewFragment extends Fragment {
+public class TripViewFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -35,7 +31,7 @@ public class tripviewFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public tripviewFragment() {
+    public TripViewFragment() {
         // Required empty public constructor
     }
 
@@ -45,11 +41,11 @@ public class tripviewFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment tripviewFragment.
+     * @return A new instance of fragment TripViewFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static tripviewFragment newInstance(String param1, String param2) {
-        tripviewFragment fragment = new tripviewFragment();
+    public static TripViewFragment newInstance(String param1, String param2) {
+        TripViewFragment fragment = new TripViewFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

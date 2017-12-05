@@ -1,21 +1,12 @@
 package com.example.josegeorges.trivelapp.ForRecyclerView;
 
-import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.josegeorges.trivelapp.MainActivity;
-import com.example.josegeorges.trivelapp.PackagesFragment;
 import com.example.josegeorges.trivelapp.R;
-import com.example.josegeorges.trivelapp.TripPackage;
-import com.example.josegeorges.trivelapp.tripviewFragment;
-
 
 
 /**

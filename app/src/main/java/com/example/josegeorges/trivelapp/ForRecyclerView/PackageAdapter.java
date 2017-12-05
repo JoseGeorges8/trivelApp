@@ -1,5 +1,6 @@
 package com.example.josegeorges.trivelapp.ForRecyclerView;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +12,7 @@ import android.view.ViewGroup;
 import com.example.josegeorges.trivelapp.MainActivity;
 import com.example.josegeorges.trivelapp.R;
 import com.example.josegeorges.trivelapp.TripPackage;
-import com.example.josegeorges.trivelapp.tripviewFragment;
+import com.example.josegeorges.trivelapp.TripViewFragment;
 
 import java.util.ArrayList;
 
@@ -57,15 +58,21 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
         * because we only need to press the item just once and this way makes it easy.
         *
         * UPDATE: I took the onClickListener from the PackageViewHolder and added it here. functionality works the same but now
-        * it makes it easier to work with the array of objects and pass the primitive data type to the tripviewFragment
+        * it makes it easier to work with the array of objects and pass the primitive data type to the TripViewFragment
         * */
         holder.getTripPackage().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("JOSE", list.get(position).getTitle() + " was pressed");
+                Bundle bundle = new Bundle();
+                bundle.putString("title", list.get(position).getTitle());
+                bundle.putString("description", list.get(position).getDescription());
+                bundle.putString("price", list.get(position).getPrice());
                 fm = activity.getSupportFragmentManager();
                 FragmentTransaction transaction = fm.beginTransaction();
-                transaction.replace(R.id.content, new tripviewFragment());
+                TripViewFragment tempFragment = new TripViewFragment();
+                tempFragment.setArguments(bundle);
+                transaction.replace(R.id.content, tempFragment);
                 transaction.commit();
             }
         });
