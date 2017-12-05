@@ -28,8 +28,6 @@ import com.example.josegeorges.trivelapp.tripviewFragment;
  * */
 public class PackageViewHolder extends RecyclerView.ViewHolder {
 
-    FragmentManager fm;
-
     //views
     private ImageView packageIcon;
     private TextView packageTitle;
@@ -39,30 +37,16 @@ public class PackageViewHolder extends RecyclerView.ViewHolder {
     private RelativeLayout tripPackage;
 
 
-    public PackageViewHolder(View itemView, final MainActivity activity) {
+    public PackageViewHolder(View itemView) {
         super(itemView);
         packageIcon = (ImageView) itemView.findViewById(R.id.package_icon);
         packageTitle = (TextView) itemView.findViewById(R.id.package_title);
         packagePrice = (TextView) itemView.findViewById(R.id.package_price);
         packageDescription = (TextView) itemView.findViewById(R.id.package_description);
 
-        /*
-        * I made a setOnClickListener for the relativeLayout to simulate when an item is pressed. I made it this way
-        * because we only need to press the item just once and this way makes it easy.
-        * */
+
         tripPackage = (RelativeLayout) itemView.findViewById(R.id.tripPackage);
-        tripPackage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(packageTitle != null){
-                   Log.d("JOSE", packageTitle.getText().toString() + " was pressed");
-                   fm = activity.getSupportFragmentManager();
-                   FragmentTransaction transaction = fm.beginTransaction();
-                   transaction.replace(R.id.content, new tripviewFragment());
-                   transaction.commit();
-                }
-            }
-        });
+
     }
 
 
@@ -85,4 +69,7 @@ public class PackageViewHolder extends RecyclerView.ViewHolder {
         return packageDescription;
     }
 
+    public RelativeLayout getTripPackage() {
+        return tripPackage;
+    }
 }

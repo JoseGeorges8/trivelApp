@@ -1,6 +1,9 @@
 package com.example.josegeorges.trivelapp.ForRecyclerView;
 
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +11,7 @@ import android.view.ViewGroup;
 import com.example.josegeorges.trivelapp.MainActivity;
 import com.example.josegeorges.trivelapp.R;
 import com.example.josegeorges.trivelapp.TripPackage;
+import com.example.josegeorges.trivelapp.tripviewFragment;
 
 import java.util.ArrayList;
 
@@ -21,7 +25,11 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
 
     //array of packages going to te recyclerView
     private ArrayList<TripPackage> list;
+
+    //activity and fragmentManager
     private MainActivity activity;
+    private FragmentManager fm;
+
 
     //constructor
     public PackageAdapter(ArrayList<TripPackage> list, MainActivity activity) {
@@ -33,16 +41,34 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
     public PackageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.packages_items, parent, false);
-        PackageViewHolder holder = new PackageViewHolder(view, activity);
+        PackageViewHolder holder = new PackageViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(PackageViewHolder holder, int position) {
+    public void onBindViewHolder(PackageViewHolder holder, final int position) {
         holder.getPackageIcon().setImageResource(list.get(position).getImageID());
         holder.getPackageTitle().setText(list.get(position).getTitle());
         holder.getPackageDescription().setText(list.get(position).getDescription());
         holder.getPackagePrice().setText(list.get(position).getPrice());
+
+         /*
+        * I made a setOnClickListener for the relativeLayout to simulate when an item is pressed. I made it this way
+        * because we only need to press the item just once and this way makes it easy.
+        *
+        * UPDATE: I took the onClickListener from the PackageViewHolder and added it here. functionality works the same but now
+        * it makes it easier to work with the array of objects and pass the primitive data type to the tripviewFragment
+        * */
+        holder.getTripPackage().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("JOSE", list.get(position).getTitle() + " was pressed");
+                fm = activity.getSupportFragmentManager();
+                FragmentTransaction transaction = fm.beginTransaction();
+                transaction.replace(R.id.content, new tripviewFragment());
+                transaction.commit();
+            }
+        });
     }
 
     @Override
