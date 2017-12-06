@@ -19,7 +19,8 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         PackagesFragment.OnFragmentInteractionListener,
-        TripViewFragment.OnFragmentInteractionListener{
+        TripViewFragment.OnFragmentInteractionListener,
+        MyWishListFragment.OnFragmentInteractionListener{
 
     FragmentManager fm;
 
@@ -94,7 +95,9 @@ public class MainActivity extends AppCompatActivity
             transaction.replace(R.id.content, new PackagesFragment());
             transaction.commit();
         } else if (id == R.id.nav_wish_list) {
-
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.content, new MyWishListFragment());
+            transaction.commit();
         } else if (id == R.id.nav_about_us) {
 
         } else if (id == R.id.nav_credits) {
