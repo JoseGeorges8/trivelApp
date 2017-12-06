@@ -5,11 +5,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.josegeorges.trivelapp.ForRecyclerView.PackageAdapter;
 
@@ -37,6 +42,9 @@ public class MyWishListFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     //needed items
+    private FragmentManager fm;
+    private Button goToPackagesButton;
+    private TextView isEmptyTextView;
     private RecyclerView recyclerView;
     private ArrayList<TripPackage> tripPackages;
 
@@ -82,10 +90,12 @@ public class MyWishListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_packages, container, false);
+        View view = inflater.inflate(R.layout.fragment_my_wish_list, container, false);
 
-        //linking the recyclerView
+        //linking the views
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        isEmptyTextView = (TextView) view.findViewById(R.id.isEmpty_TextView);
+        goToPackagesButton = (Button) view.findViewById(R.id.goToPackages_button);
 
         return view;
     }
@@ -100,13 +110,34 @@ public class MyWishListFragment extends Fragment {
 
         //POPULATE PACKAGES METHOD GOES HERE
 
-        //making sure that everything is set up first
-        if (tripPackages.size() > 0 & recyclerView != null) {
+        //if the tripPackages ArrayList is empty, then we show a text view saying that there are no packages yet.
+        if (tripPackages.isEmpty()){
+            recyclerView.setVisibility(View.GONE);
+            isEmptyTextView.setVisibility(View.VISIBLE);
+            goToPackagesButton.setVisibility(View.VISIBLE);
+
+            goToPackagesButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    fm = getActivity().getSupportFragmentManager();
+                    FragmentTransaction transaction = fm.beginTransaction();
+                    transaction.replace(R.id.content, new PackagesFragment());
+                    transaction.commit();
+                }
+            });
+
+        }else{
+            recyclerView.setVisibility(View.VISIBLE);
+            isEmptyTextView.setVisibility(View.GONE);
+            goToPackagesButton.setVisibility(View.GONE);
             recyclerView.setAdapter(new PackageAdapter(tripPackages, (MainActivity) this.getActivity()));
         }
         recyclerView.setLayoutManager(myLayoutManager);
 
     }
+
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
