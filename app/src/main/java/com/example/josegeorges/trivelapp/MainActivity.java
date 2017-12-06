@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity
 
     FragmentManager fm;
 
+    public static boolean fabIsVisible = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

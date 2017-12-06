@@ -73,6 +73,7 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
                 TripViewFragment tempFragment = new TripViewFragment();
                 tempFragment.setArguments(bundle);
                 transaction.replace(R.id.content, tempFragment);
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
