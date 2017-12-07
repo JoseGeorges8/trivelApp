@@ -16,48 +16,88 @@ public class TripPackage {
     //properties for the package
     private String title;
     private String description;
-    private String recommendedFor;
+    private ArrayList<String[]> activities;
     private String duration;
     private String price;
-    private int imageId;
-
+    private String longitude;
+    private String latitute;
+    private ArrayList<int[]> imagesId;
     //constructor
-    public TripPackage(String title, String description, String recommendedFor, String duration, String price,
-                      int imageId){
+    public TripPackage(String title, String description, ArrayList<String[]> activities, String duration, String price,
+                       String longitude, String latitute, ArrayList<int[]> imagesId){
         this.title = title;
         this.description = description;
-        this.recommendedFor = recommendedFor;
+        this.activities = activities;
         this.duration = duration;
         this.price = price;
-        this.imageId = imageId;
+        this.longitude = longitude;
+        this.latitute = latitute;
+        this.imagesId = imagesId;
     }
 
-    //getters for each package
+    //getters and setters for each package
+
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public String getDescription() {
         return description;
     }
 
-
-    public String getRecommendedFor() {
-        return recommendedFor;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
+    public ArrayList<String[]> getActivities() {
+        return activities;
+    }
+
+    public void setActivities(ArrayList activities) {
+        this.activities = activities;
+    }
 
     public String getDuration() {
         return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
     public String getPrice() {
         return price;
     }
 
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
-    public int getImageID() {
-        return imageId;
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLatitute() {
+        return latitute;
+    }
+
+    public void setLatitute(String latitute) {
+        this.latitute = latitute;
+    }
+
+    public ArrayList<int[]> getImagesId() {
+        return imagesId;
+    }
+
+    public void setImagesId(ArrayList imagesId) {
+        this.imagesId = imagesId;
     }
 }

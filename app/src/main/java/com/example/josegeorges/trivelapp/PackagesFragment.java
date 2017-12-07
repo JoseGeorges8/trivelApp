@@ -13,7 +13,9 @@ import android.view.ViewGroup;
 
 import com.example.josegeorges.trivelapp.ForRecyclerView.PackageAdapter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class PackagesFragment extends Fragment {
@@ -93,16 +95,34 @@ public class PackagesFragment extends Fragment {
     * */
     public void populatePackages(){
         tripPackages.clear();
+        //title for each object
       String[] titles = {"title1", "title2", "title3"};
+        //description for each object
       String[] descriptions = {"description1", "description2", "description3"};
+       //activities for each object
+        String[] activities = {"activity1", "activity2", "activity3"};
+        ArrayList<String[]> arrayListActivities = new ArrayList<>();
+        arrayListActivities.add(activities);
+        arrayListActivities.add(activities);
+        arrayListActivities.add(activities);
+        //duration for each object
+        String[] duration = {"duration1", "duration2", "duration3"};
+        //prices for each object
       String[] prices = {"price1", "price2", "price3"};
-      String[] duration = {"duration1", "duration2", "duration3"};
-      String[] recommendedFor = {"recommendedFor1", "recommendedFor2", "recommendedFor3"};
-      int[] imagesIds = {R.drawable.ic_flight_takeoff_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
+      //location for each object
+      String[] longitude = {"232", "2424", "646"};
+      String[] latitute = {"666", "554", "323"};
+        //array of images id for each object
+        int[] imagesIds = {R.drawable.ic_flight_takeoff_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
+        ArrayList<int[]> arrayListimagesIds = new ArrayList<>();
+        arrayListimagesIds.add(imagesIds);
+        arrayListimagesIds.add(imagesIds);
+        arrayListimagesIds.add(imagesIds);
+
 
       for(int i = 0; i < titles.length; i++){
-          TripPackage tripPackage = new TripPackage(titles[i], descriptions[i], recommendedFor[i]
-          ,duration[i], prices[i], imagesIds[i]);
+          TripPackage tripPackage = new TripPackage(titles[i], descriptions[i], arrayListActivities
+          ,duration[i], prices[i], longitude[i], latitute[i], arrayListimagesIds);
           tripPackages.add(tripPackage);
       }
     }

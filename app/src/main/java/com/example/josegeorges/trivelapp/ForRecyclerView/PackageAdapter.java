@@ -48,7 +48,7 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
 
     @Override
     public void onBindViewHolder(PackageViewHolder holder, final int position) {
-        holder.getPackageIcon().setImageResource(list.get(position).getImageID());
+        holder.getPackageIcon().setImageResource(list.get(position).getImagesId().get(0)[0]);
         holder.getPackageTitle().setText(list.get(position).getTitle());
         holder.getPackageDescription().setText(list.get(position).getDescription());
         holder.getPackagePrice().setText(list.get(position).getPrice());
