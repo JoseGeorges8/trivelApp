@@ -82,11 +82,6 @@ public class MyWishListFragment extends Fragment {
 
     }
 
-    /**
-     *
-     * As of right now, it makes sense to live the same layout fragmemt_packages from the PackageFragment, since they both only
-     * will carry a recyclerView
-     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
