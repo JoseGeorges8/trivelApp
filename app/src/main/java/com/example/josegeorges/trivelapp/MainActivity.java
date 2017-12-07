@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity
 
     FragmentManager fm;
 
-    public static boolean fabIsVisible = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +32,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        fab.hide();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -90,13 +82,18 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         fm = getSupportFragmentManager();
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         if (id == R.id.nav_packages) {
             FragmentTransaction transaction = fm.beginTransaction();
             transaction.replace(R.id.content, new PackagesFragment());
+            transaction.addToBackStack(null);
+            fab.hide();
             transaction.commit();
         } else if (id == R.id.nav_wish_list) {
             FragmentTransaction transaction = fm.beginTransaction();
             transaction.replace(R.id.content, new MyWishListFragment());
+            fab.hide();
             transaction.commit();
         } else if (id == R.id.nav_about_us) {
 

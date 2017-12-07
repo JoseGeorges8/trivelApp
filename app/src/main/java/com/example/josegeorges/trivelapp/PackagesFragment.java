@@ -92,7 +92,6 @@ public class PackagesFragment extends Fragment {
     * This packages are going to the adapter to inflate the layout.
     * */
     public void populatePackages(){
-        tripPackages.clear();
       String[] titles = {"title1", "title2", "title3"};
       String[] descriptions = {"description1", "description2", "description3"};
       String[] prices = {"price1", "price2", "price3"};

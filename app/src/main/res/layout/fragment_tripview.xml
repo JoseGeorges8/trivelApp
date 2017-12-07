@@ -1,5 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,7 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -19,6 +21,13 @@
         android:layout_height="218dp">
 
     </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="textEnd" />
 
     <TabHost
         android:id="@+id/tabHost"
@@ -47,7 +56,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/descriptionText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="DesText" />
@@ -104,6 +113,7 @@
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
+
     </TabHost>
 
 </LinearLayout>
