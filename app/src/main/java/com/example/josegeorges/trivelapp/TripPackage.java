@@ -13,18 +13,20 @@ import java.util.ArrayList;
  */
 public class TripPackage {
 
+
+
     //properties for the package
     private String title;
     private String description;
-    private ArrayList<String[]> activities;
+    private String[] activities;
     private String duration;
     private String price;
     private String longitude;
     private String latitute;
-    private ArrayList<int[]> imagesId;
+    private int[] imagesId;
     //constructor
-    public TripPackage(String title, String description, ArrayList<String[]> activities, String duration, String price,
-                       String longitude, String latitute, ArrayList<int[]> imagesId){
+    public TripPackage(String title, String description, String[] activities, String duration, String price,
+                       String longitude, String latitute, int[] imagesId){
         this.title = title;
         this.description = description;
         this.activities = activities;
@@ -53,13 +55,6 @@ public class TripPackage {
         this.description = description;
     }
 
-    public ArrayList<String[]> getActivities() {
-        return activities;
-    }
-
-    public void setActivities(ArrayList activities) {
-        this.activities = activities;
-    }
 
     public String getDuration() {
         return duration;
@@ -93,11 +88,19 @@ public class TripPackage {
         this.latitute = latitute;
     }
 
-    public ArrayList<int[]> getImagesId() {
+    public String[] getActivities() {
+        return activities;
+    }
+
+    public void setActivities(String[] activities) {
+        this.activities = activities;
+    }
+
+    public int[] getImagesId() {
         return imagesId;
     }
 
-    public void setImagesId(ArrayList imagesId) {
+    public void setImagesId(int[] imagesId) {
         this.imagesId = imagesId;
     }
 }

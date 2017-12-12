@@ -114,15 +114,18 @@ public class PackagesFragment extends Fragment {
       String[] latitute = {"666", "554", "323"};
         //array of images id for each object
         int[] imagesIds = {R.drawable.ic_flight_takeoff_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
+        int[] imagesIds2 = {R.drawable.ic_menu_camera, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
+        int[] imagesIds3 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
+
         ArrayList<int[]> arrayListimagesIds = new ArrayList<>();
         arrayListimagesIds.add(imagesIds);
-        arrayListimagesIds.add(imagesIds);
-        arrayListimagesIds.add(imagesIds);
+        arrayListimagesIds.add(imagesIds2);
+        arrayListimagesIds.add(imagesIds3);
 
 
       for(int i = 0; i < titles.length; i++){
-          TripPackage tripPackage = new TripPackage(titles[i], descriptions[i], arrayListActivities
-          ,duration[i], prices[i], longitude[i], latitute[i], arrayListimagesIds);
+          TripPackage tripPackage = new TripPackage(titles[i], descriptions[i], arrayListActivities.get(i)
+          ,duration[i], prices[i], longitude[i], latitute[i], arrayListimagesIds.get(i));
           tripPackages.add(tripPackage);
       }
     }
