@@ -23,7 +23,7 @@ import java.util.ArrayList;
  * The adapter will be in charge of populating the recyclerView with the information needed
  * */
 public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
-    
+
     //array of packages going to te recyclerView
     private ArrayList<TripPackage> list;
 

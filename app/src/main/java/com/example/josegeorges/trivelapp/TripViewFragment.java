@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -101,6 +102,13 @@ public class TripViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tripview, container, false);
 
+        /**
+         * Adding the viewPager and setting the adapter
+         */
+        CustomAdapter adapter = new CustomAdapter(getChildFragmentManager()); //getChildFragmentManager
+        ViewPager viewPager = (ViewPager) view.findViewById(R.id.tripView_viewPager);
+        viewPager.setAdapter(adapter);
+
         TabHost host = view.findViewById(R.id.tabHost);
         host.setup();
 
@@ -146,13 +154,15 @@ public class TripViewFragment extends Fragment {
         //position tells the program what fragment we are currently on/displaying
         public Fragment getItem(int position){
             switch (position){ //notice we don't use breaks on each case, due to the return statement on each.
-                case 0: return null;
-                default: return null;
+                case 0: return TripImageFragment.newInstance(imagesId[0]);
+                case 1: return TripImageFragment.newInstance(imagesId[1]);
+                case 2: return TripImageFragment.newInstance(imagesId[2]);
+                default: return TripImageFragment.newInstance(imagesId[0]);
             }
         }
 
         public  int getCount(){
-            return 0;
+            return 3;
         }
 
     }
