@@ -1,33 +1,20 @@
 package com.example.josegeorges.trivelapp;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
-import android.view.animation.OvershootInterpolator;
-import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.github.clans.fab.FloatingActionMenu;
 
 import java.util.ArrayList;
@@ -216,12 +203,12 @@ public class TripViewFragment extends Fragment {
         titleText.setText(title);
         descriptionText.setText(description);
         priceText.setText(price);
-
-
-
-
         return view;
+
     }
+
+
+
 
     //When the activity is created the fab button is added and animated into the apps fragment
     @Override

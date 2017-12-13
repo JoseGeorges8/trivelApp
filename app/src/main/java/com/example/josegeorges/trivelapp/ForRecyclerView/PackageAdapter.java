@@ -1,6 +1,5 @@
 package com.example.josegeorges.trivelapp.ForRecyclerView;
 
-import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
@@ -73,9 +72,6 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
             }
         });
     }
-
-
-
 
 
     @Override
