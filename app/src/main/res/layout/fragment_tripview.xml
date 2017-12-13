@@ -19,15 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@android:drawable/ic_dialog_email" />
-
         <android.support.v4.view.ViewPager
             android:id="@+id/tripView_viewPager"
             android:layout_width="match_parent"
@@ -69,7 +60,7 @@
                         android:layout_alignParentRight="true"
                         android:elevation="7dp"
                         android:text="TextView"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/descriptionText"
@@ -92,49 +83,51 @@
                         android:text="ActText" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/contact"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/email"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Email Us" />
-
-                    <Button
-                        android:id="@+id/map"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Our Location" />
-
-                    <Button
-                        android:id="@+id/call"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Call Us" />
-
-                    <Button
-                        android:id="@+id/web"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Website" />
-
-                    <Button
-                        android:id="@+id/calendar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Calendar" />
-                </LinearLayout>
             </FrameLayout>
         </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/menu_red"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit"
+                    app:fab_label="Disabled"
+                    app:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit"
+                    app:fab_label="Remove button"
+                    app:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit"
+                    app:fab_label="Restore Button"
+                    app:fab_size="mini" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+        </RelativeLayout>
+
     </TabHost>
-
-
-
 
 
 </LinearLayout>
