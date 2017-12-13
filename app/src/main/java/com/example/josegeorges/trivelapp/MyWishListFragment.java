@@ -52,6 +52,21 @@ public class MyWishListFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public void addToArrayList(TripPackage tripPackage){
+        boolean contained = false;
+        for (int i = 0; i < tripPackages.size(); i++){
+            if(tripPackage.getTitle() == tripPackages.get(i).getTitle())
+                contained = true;
+        }
+        if(contained)
+            Log.d("JOSE", "Already in arrayList, should remove it instead");
+        else {
+            tripPackages.add(tripPackage);
+            Log.d("JOSE", "added " + tripPackage.getTitle() + " to the arrayList, size: " + tripPackages.size());
+        }
+
+    }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -106,10 +121,6 @@ public class MyWishListFragment extends Fragment {
         //POPULATE PACKAGES METHOD GOES HERE
 
         //if the tripPackages ArrayList is empty, then we show a text view saying that there are no packages yet.
-        if (tripPackages.isEmpty()){
-            recyclerView.setVisibility(View.GONE);
-            isEmptyTextView.setVisibility(View.VISIBLE);
-            goToPackagesButton.setVisibility(View.VISIBLE);
 
             goToPackagesButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -121,12 +132,7 @@ public class MyWishListFragment extends Fragment {
                 }
             });
 
-        }else{
-            recyclerView.setVisibility(View.VISIBLE);
-            isEmptyTextView.setVisibility(View.GONE);
-            goToPackagesButton.setVisibility(View.GONE);
-            recyclerView.setAdapter(new PackageAdapter(tripPackages, (MainActivity) this.getActivity()));
-        }
+        recyclerView.setAdapter(new PackageAdapter(tripPackages, (MainActivity) this.getActivity()));
         recyclerView.setLayoutManager(myLayoutManager);
 
     }

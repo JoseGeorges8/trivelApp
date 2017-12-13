@@ -146,6 +146,9 @@ public class TripViewFragment extends Fragment {
 
                 Snackbar.make(view, title + " added to your favorites", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
+
+                TripPackage temp = new TripPackage(title, description, activities, duration, price, longitude, latitude, imagesId);
+                onFabButtonPressed(temp);
             }
         });
 
@@ -182,12 +185,7 @@ public class TripViewFragment extends Fragment {
 
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
+
 
     @Override
     public void onAttach(Context context) {
@@ -217,7 +215,12 @@ public class TripViewFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(TripPackage tripPackage);
+    }
+
+    public void onFabButtonPressed(TripPackage tripPackage) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(tripPackage);
+        }
     }
 }
