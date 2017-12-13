@@ -1,40 +1,33 @@
 package com.example.josegeorges.trivelapp;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
-import android.view.animation.OvershootInterpolator;
-import android.widget.Button;
+
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionMenu;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 
 /**
@@ -85,6 +78,7 @@ public class TripViewFragment extends Fragment {
     public TripViewFragment() {
 
     }
+
 
     /**
      * Use this factory method to create a new instance of
@@ -140,7 +134,7 @@ public class TripViewFragment extends Fragment {
         fab2 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab2);
         fab3 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab3);
 
-        fab1.setLabelText(title);
+        fab1.setLabelText("Add " + title + " to wishlist");
         fab2.setLabelText("Map");
         fab3.setLabelText(price);
 
@@ -156,13 +150,22 @@ public class TripViewFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                //For wishlist
-                Snackbar.make(view, title + " added to your favorites", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
 
                 TripPackage temp = new TripPackage(title, description, activities, duration, price, longitude, latitude, imagesId);
                 onFabButtonPressed(temp);
+
+                if (menuRed.isOpened()) {
+                            Toast.makeText(getActivity(), title + " was added to the wishlist", Toast.LENGTH_SHORT).show();
+                        }
+
+                        menuRed.toggle(true);
             }
+
+
+
+
+
+
         });
 
         fab2.setOnClickListener(new View.OnClickListener() {
@@ -244,7 +247,6 @@ public class TripViewFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         menus.add(menuRed);
-
 
 
         int delay = 400;
