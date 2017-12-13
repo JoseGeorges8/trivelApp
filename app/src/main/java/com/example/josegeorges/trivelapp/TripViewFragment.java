@@ -30,14 +30,7 @@ import java.util.List;
 
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link TripViewFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link TripViewFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class TripViewFragment extends Fragment {
 
 
@@ -63,7 +56,7 @@ public class TripViewFragment extends Fragment {
     public static final String IMAGES_ID = "images";
 
 
-    // TODO: Rename and change types of parameters
+
     private String title;
     private String description;
     private String[] activities;
@@ -81,14 +74,15 @@ public class TripViewFragment extends Fragment {
 
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
+     * Receiving the array list with the position selected
+     * to access all the properties from the tripPackage.
+     * Then, adding them to a bundle to make use of them later in the properties
+     * declared in this fragment.
      *
      * @param list ArrayList of tripPackages.
      * @param position to know which item that was pressed in the recyclerView.
      * @return A new instance of fragment TripViewFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static TripViewFragment newInstance(ArrayList<TripPackage> list, int position) {
         TripViewFragment fragment = new TripViewFragment();
         Bundle bundle = new Bundle();
@@ -108,6 +102,7 @@ public class TripViewFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+            //populating properties from the bundle received
             title = getArguments().getString(TITLE);
             description = getArguments().getString(DESCRIPTION);
             activities = getArguments().getStringArray(ACTIVITIES);
@@ -126,6 +121,7 @@ public class TripViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //inflating the view
         View view = inflater.inflate(R.layout.fragment_tripview, container, false);
 
         menuRed = (com.github.clans.fab.FloatingActionMenu) view.findViewById(R.id.menu_red);
@@ -146,6 +142,9 @@ public class TripViewFragment extends Fragment {
          * fab2 = Location (map)
          * fab3 = Add to calender
          */
+
+        //When this button is pressed, a TripPackage is created with all the properties received,
+        //and then passed to the onFabButtonPressed, which is declared at the bottom of the file.
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -155,10 +154,9 @@ public class TripViewFragment extends Fragment {
                 onFabButtonPressed(temp);
 
                 if (menuRed.isOpened()) {
-                            Toast.makeText(getActivity(), title + " was added to the wishlist", Toast.LENGTH_SHORT).show();
-                        }
-
-                        menuRed.toggle(true);
+                    Toast.makeText(getActivity(), title + " was added to the wishlist", Toast.LENGTH_SHORT).show();
+                }
+                menuRed.toggle(true);
             }
 
 
@@ -203,6 +201,9 @@ public class TripViewFragment extends Fragment {
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.tripView_viewPager);
         viewPager.setAdapter(adapter);
 
+        /**
+         * Creating the TabHost
+         */
         TabHost host = view.findViewById(R.id.tabHost);
         host.setup();
 
@@ -215,7 +216,6 @@ public class TripViewFragment extends Fragment {
         spec.setContent(R.id.activities);
         spec.setIndicator("Activities");
         host.addTab(spec);
-
 
         TextView titleText = view.findViewById(R.id.titleText);
         TextView descriptionText = view.findViewById(R.id.descriptionText);
@@ -235,9 +235,6 @@ public class TripViewFragment extends Fragment {
         String str = builder.toString();
         actText.setText(str);
 
-
-
-
         return view;
     }
 
@@ -247,7 +244,6 @@ public class TripViewFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         menus.add(menuRed);
-
 
         int delay = 400;
         for (final FloatingActionMenu menu : menus) {
@@ -259,9 +255,6 @@ public class TripViewFragment extends Fragment {
             }, delay);
             delay += 150;
         }
-
-
-
     }
 
 
@@ -317,15 +310,9 @@ public class TripViewFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
+    /*
+        This interface is currently in use to pass TripPackages from here, to the MainActivity,
+        which implements this interface.
      */
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(TripPackage tripPackage);

@@ -22,22 +22,10 @@ import java.util.ArrayList;
 
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link MyWishListFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link MyWishListFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * This class will serve the purpose of showing the user's selected packages.
  */
 public class MyWishListFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
@@ -53,13 +41,20 @@ public class MyWishListFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public ArrayList<TripPackage> getTripPackages() {
-        return tripPackages;
-    }
 
-    //THIS METHOD IS WORKING, THEY ARE BEING ADDED BUT THE ARRAYLIST EMPTIES ONCE WE GO OUT OF IT
+    /**
+     * This method is called from the MainActivity to add the TripPackage to the ArrayList that is going
+     * to populate the RecyclerView through the Adapter.
+     *
+     * The method checks to see if the selected package is already in the list, if it is then the package
+     * will be remove instead. This way we avoid duplicates and it makes sense to change the functioning from
+     * adding to removing.
+     *
+     * TODO: The Toast created by the Fab button shows Added even though is even remove, we have to find a way to fix this
+     *
+     * @param tripPackage package selected by the user in the TripViewFragment
+     */
     public void addToArrayList(TripPackage tripPackage){
-        //this if does not work
         boolean contained = false;
         for(int i = 0; i < tripPackages.size(); i++){
             if(tripPackage.getTitle() == tripPackages.get(i).getTitle()) {
@@ -69,45 +64,27 @@ public class MyWishListFragment extends Fragment {
             }
         }
         if(contained)
+            //DEBUGGING PURPOSES
             Log.d("JOSE", "Already in arrayList, should remove it instead");
         else {
             tripPackages.add(tripPackage);
             adapter.notifyDataSetChanged();
+
+            //DEBUGGING PURPOSES
             Log.d("JOSE", "added it " + tripPackages.size() );
         }
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MyWishListFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MyWishListFragment newInstance(String param1, String param2) {
-        MyWishListFragment fragment = new MyWishListFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //inflating the view
         View view = inflater.inflate(R.layout.fragment_my_wish_list, container, false);
 
         //linking the views
@@ -115,13 +92,12 @@ public class MyWishListFragment extends Fragment {
         isEmptyTextView = (TextView) view.findViewById(R.id.isEmpty_TextView);
         goToPackagesButton = (Button) view.findViewById(R.id.goToPackages_button);
 
-        //setting up the recyclerView
+        //setting up the layoutManager
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         //if the tripPackages ArrayList is empty, then we show a text view saying that there are no packages yet.
         if (tripPackages.isEmpty()){
-           // Log.d("JOSE", "ArrayList is empty " + tripPackages.size());
             recyclerView.setVisibility(View.GONE);
             isEmptyTextView.setVisibility(View.VISIBLE);
             goToPackagesButton.setVisibility(View.VISIBLE);
@@ -136,14 +112,20 @@ public class MyWishListFragment extends Fragment {
                 }
             });
 
+            //DEBUGGING PURPOSES
+            Log.d("JOSE", "ArrayList is empty " + tripPackages.size());
+
+        //else, we show the RecyclerView with the current TripPackages
         }else{
-            Log.d("JOSE", "ArrayList is NOT empty " + tripPackages.size());
             recyclerView.setVisibility(View.VISIBLE);
             isEmptyTextView.setVisibility(View.GONE);
             goToPackagesButton.setVisibility(View.GONE);
+
+            //DEBUGGING PURPOSES
+            Log.d("JOSE", "ArrayList is NOT empty " + tripPackages.size());
         }
 
-        //setting layoutmanager and adapter to the recyclerView
+        //setting layoutManager and adapter to the recyclerView
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(myLayoutManager);
         return view;
@@ -153,16 +135,18 @@ public class MyWishListFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-
         //setting up the adapter
         adapter = new PackageAdapter(tripPackages, (MainActivity) this.getActivity());
     }
 
 
+    /*
 
+The code below comes with the Fragment to create interaction between Fragments
+    it is not being used but left it in case of need for future usage.
 
-    // TODO: Rename method, update argument and hook method into UI event
+     */
+
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -186,18 +170,7 @@ public class MyWishListFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

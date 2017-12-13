@@ -11,16 +11,13 @@ import android.widget.ImageView;
 
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link TripImageFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link TripImageFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * This Fragment is used to show the images inside the ViewPager from TripViewFragment
  */
 public class TripImageFragment extends Fragment {
+
     //key for the bundle
     private static final String IMAGE = "image";
+
     //variable receiving the image
     private int image;
 
@@ -37,7 +34,6 @@ public class TripImageFragment extends Fragment {
      * @param image image to populate the imageView with.
      * @return A new instance of fragment TripImageFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static TripImageFragment newInstance(int image) {
         TripImageFragment fragment = new TripImageFragment();
         Bundle args = new Bundle();
@@ -46,10 +42,12 @@ public class TripImageFragment extends Fragment {
         return fragment;
     }
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+            //setting the image ID here
             image = getArguments().getInt(IMAGE);
         }
     }
@@ -57,8 +55,10 @@ public class TripImageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //inflating the view
         View view =  inflater.inflate(R.layout.fragment_trip_image, container, false);
 
+        //simply set the image to the received image
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
         imageView.setImageResource(image);
 
@@ -66,7 +66,13 @@ public class TripImageFragment extends Fragment {
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
+        /*
+
+The code below comes with the Fragment to create interaction between Fragments
+    it is not being used but left it in case of need for future usage.
+
+     */
+
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -90,18 +96,7 @@ public class TripImageFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }
