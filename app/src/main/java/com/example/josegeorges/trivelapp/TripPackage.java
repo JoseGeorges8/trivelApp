@@ -5,8 +5,6 @@ package com.example.josegeorges.trivelapp;
  */
 
 
-import java.util.ArrayList;
-
 /**
  * This class will serve has a holder for the information of each package. making it easier to populate the recyclerView with each package.
  * the class will have private properties, they will be populated through the constructor and called through getters.

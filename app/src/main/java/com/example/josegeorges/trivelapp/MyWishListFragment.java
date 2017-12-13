@@ -46,23 +46,35 @@ public class MyWishListFragment extends Fragment {
     private Button goToPackagesButton;
     private TextView isEmptyTextView;
     private RecyclerView recyclerView;
-    private ArrayList<TripPackage> tripPackages;
+    private ArrayList<TripPackage> tripPackages = new ArrayList<>();
     private PackageAdapter adapter;
 
     public MyWishListFragment() {
         // Required empty public constructor
     }
 
-    //THIS METHOD IS WORKING, THEY ARE BEING ADDED BUT THEY ARE NOT DISPLAYING IN THE RECYCLERVIEW YET FOR SOME REASON
+    public ArrayList<TripPackage> getTripPackages() {
+        return tripPackages;
+    }
+
+    //THIS METHOD IS WORKING, THEY ARE BEING ADDED BUT THE ARRAYLIST EMPTIES ONCE WE GO OUT OF IT
     public void addToArrayList(TripPackage tripPackage){
         //this if does not work
-        if(tripPackages.contains(tripPackage))
+        boolean contained = false;
+        for(int i = 0; i < tripPackages.size(); i++){
+            if(tripPackage.getTitle() == tripPackages.get(i).getTitle()) {
+                contained = true;
+                tripPackages.remove(tripPackages.get(i));
+                break;
+            }
+        }
+        if(contained)
             Log.d("JOSE", "Already in arrayList, should remove it instead");
         else {
             tripPackages.add(tripPackage);
-            Log.d("JOSE", "added it" );
+            adapter.notifyDataSetChanged();
+            Log.d("JOSE", "added it " + tripPackages.size() );
         }
-
     }
 
     /**
@@ -91,7 +103,6 @@ public class MyWishListFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-
     }
 
     @Override
@@ -104,23 +115,13 @@ public class MyWishListFragment extends Fragment {
         isEmptyTextView = (TextView) view.findViewById(R.id.isEmpty_TextView);
         goToPackagesButton = (Button) view.findViewById(R.id.goToPackages_button);
 
-        return view;
-    }
-
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        tripPackages = new ArrayList<>();
-        adapter = new PackageAdapter(tripPackages, (MainActivity) this.getActivity());
-
         //setting up the recyclerView
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         //if the tripPackages ArrayList is empty, then we show a text view saying that there are no packages yet.
         if (tripPackages.isEmpty()){
+           // Log.d("JOSE", "ArrayList is empty " + tripPackages.size());
             recyclerView.setVisibility(View.GONE);
             isEmptyTextView.setVisibility(View.VISIBLE);
             goToPackagesButton.setVisibility(View.VISIBLE);
@@ -136,14 +137,26 @@ public class MyWishListFragment extends Fragment {
             });
 
         }else{
+            Log.d("JOSE", "ArrayList is NOT empty " + tripPackages.size());
             recyclerView.setVisibility(View.VISIBLE);
             isEmptyTextView.setVisibility(View.GONE);
             goToPackagesButton.setVisibility(View.GONE);
-            recyclerView.setAdapter(adapter);
         }
 
+        //setting layoutmanager and adapter to the recyclerView
+        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(myLayoutManager);
+        return view;
+    }
 
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+        //setting up the adapter
+        adapter = new PackageAdapter(tripPackages, (MainActivity) this.getActivity());
     }
 
 
