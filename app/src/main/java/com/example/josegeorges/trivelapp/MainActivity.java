@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         PackagesFragment.OnFragmentInteractionListener,
         TripViewFragment.OnFragmentInteractionListener,
-        MyWishListFragment.OnFragmentInteractionListener{
+        MyWishListFragment.OnFragmentInteractionListener,
+        TripImageFragment.OnFragmentInteractionListener{
 
     FragmentManager fm;
 
