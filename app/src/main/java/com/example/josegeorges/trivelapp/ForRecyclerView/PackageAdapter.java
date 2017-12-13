@@ -49,7 +49,7 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
 
     @Override
     public void onBindViewHolder(PackageViewHolder holder, final int position) {
-        holder.getPackageIcon().setImageResource(list.get(position).getImageID());
+        holder.getPackageIcon().setImageResource(list.get(position).getImagesId()[0]);
         holder.getPackageTitle().setText(list.get(position).getTitle());
         holder.getPackageDescription().setText(list.get(position).getDescription());
         holder.getPackagePrice().setText(list.get(position).getPrice());
@@ -65,15 +65,9 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
             @Override
             public void onClick(View view) {
                 Log.d("JOSE", list.get(position).getTitle() + " was pressed");
-                Bundle bundle = new Bundle();
-                bundle.putString("title", list.get(position).getTitle());
-                bundle.putString("description", list.get(position).getDescription());
-                bundle.putString("price", list.get(position).getPrice());
                 fm = activity.getSupportFragmentManager();
                 FragmentTransaction transaction = fm.beginTransaction();
-                TripViewFragment tempFragment = new TripViewFragment();
-                tempFragment.setArguments(bundle);
-                transaction.replace(R.id.content, tempFragment);
+                transaction.replace(R.id.content, TripViewFragment.newInstance(list, position));
                 transaction.addToBackStack(null);
                 transaction.commit();
             }

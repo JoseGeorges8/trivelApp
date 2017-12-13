@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,9 +21,13 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         PackagesFragment.OnFragmentInteractionListener,
         TripViewFragment.OnFragmentInteractionListener,
-        MyWishListFragment.OnFragmentInteractionListener{
+        MyWishListFragment.OnFragmentInteractionListener,
+        TripImageFragment.OnFragmentInteractionListener{
 
     FragmentManager fm;
+
+
+    public static boolean fabIsVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +36,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.hide();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -82,18 +85,14 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         fm = getSupportFragmentManager();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
         if (id == R.id.nav_packages) {
             FragmentTransaction transaction = fm.beginTransaction();
             transaction.replace(R.id.content, new PackagesFragment());
-            transaction.addToBackStack(null);
-            fab.hide();
             transaction.commit();
         } else if (id == R.id.nav_wish_list) {
             FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(R.id.content, new MyWishListFragment());
-            fab.hide();
+            transaction.replace(R.id.content, new MyWishListFragment(), "MyWish")
+            .addToBackStack("MyWish");
             transaction.commit();
         } else if (id == R.id.nav_about_us) {
 
@@ -104,6 +103,13 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(TripPackage tripPackage) {
+        MyWishListFragment receiver = (MyWishListFragment) fm.findFragmentByTag("MyWish");
+        receiver.addToArrayList(tripPackage);
+        Log.d("JOSE", "Receiving listener, sending " + tripPackage.getTitle() + " to " + receiver.toString());
     }
 
     @Override
