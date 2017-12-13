@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -29,6 +30,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionMenu;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -138,7 +141,7 @@ public class TripViewFragment extends Fragment {
         fab3 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab3);
 
         fab1.setLabelText(title);
-        fab2.setLabelText(description);
+        fab2.setLabelText("Map");
         fab3.setLabelText(price);
 
 
@@ -166,9 +169,11 @@ public class TripViewFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                //For Location
-                Snackbar.make(view, title + " fab2 was pressed", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + latitude + "," + longitude + "(" + title + ")");
+                Log.d("nick", gmmIntentUri.toString());
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
 
             }
         });
@@ -212,10 +217,20 @@ public class TripViewFragment extends Fragment {
         TextView titleText = view.findViewById(R.id.titleText);
         TextView descriptionText = view.findViewById(R.id.descriptionText);
         TextView priceText = view.findViewById(R.id.priceText);
+        TextView actText = view.findViewById(R.id.actText);
+        TextView durText = view.findViewById(R.id.durText);
 
         titleText.setText(title);
         descriptionText.setText(description);
         priceText.setText(price);
+        durText.setText(duration);
+
+        StringBuilder builder = new StringBuilder();
+        for(String s : activities) {
+            builder.append(s);
+        }
+        String str = builder.toString();
+        actText.setText(str);
 
 
 
@@ -269,12 +284,14 @@ public class TripViewFragment extends Fragment {
                 case 0: return TripImageFragment.newInstance(imagesId[0]);
                 case 1: return TripImageFragment.newInstance(imagesId[1]);
                 case 2: return TripImageFragment.newInstance(imagesId[2]);
+                case 3: return TripImageFragment.newInstance(imagesId[3]);
+                case 4: return TripImageFragment.newInstance(imagesId[4]);
                 default: return TripImageFragment.newInstance(imagesId[0]);
             }
         }
 
         public  int getCount(){
-            return 3;
+            return 5;
         }
 
     }
