@@ -148,6 +148,7 @@ public class TripViewFragment extends Fragment {
                         .setAction("Action", null).show();
 
                 TripPackage temp = new TripPackage(title, description, activities, duration, price, longitude, latitude, imagesId);
+
                 onFabButtonPressed(temp);
             }
         });

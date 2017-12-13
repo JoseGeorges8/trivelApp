@@ -73,6 +73,10 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
         });
     }
 
+    public void add(TripPackage tripPackage){
+        list.add(tripPackage);
+    }
+
     @Override
     public int getItemCount() {
         return list.size();

@@ -91,8 +91,15 @@ public class MainActivity extends AppCompatActivity
             transaction.commit();
         } else if (id == R.id.nav_wish_list) {
             FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(R.id.content, new MyWishListFragment(), "MyWish")
-            .addToBackStack("MyWish");
+            MyWishListFragment fragment = (MyWishListFragment) fm.findFragmentByTag("MyWish");
+            if(fragment != null){
+                transaction.replace(R.id.content, fragment)
+                        .addToBackStack("MyWish");
+            }else{
+                transaction.replace(R.id.content, new MyWishListFragment(), "MyWish")
+                        .addToBackStack("MyWish");
+            }
+
             transaction.commit();
         } else if (id == R.id.nav_about_us) {
 
