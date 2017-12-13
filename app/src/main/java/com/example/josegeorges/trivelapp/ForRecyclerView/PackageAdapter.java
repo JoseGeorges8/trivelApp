@@ -1,6 +1,5 @@
 package com.example.josegeorges.trivelapp.ForRecyclerView;
 
-import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
@@ -23,6 +22,7 @@ import java.util.ArrayList;
  * The adapter will be in charge of populating the recyclerView with the information needed
  * */
 public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
+
 
     //array of packages going to te recyclerView
     private ArrayList<TripPackage> list;
@@ -73,9 +73,6 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
         });
     }
 
-    public void add(TripPackage tripPackage){
-        list.add(tripPackage);
-    }
 
     @Override
     public int getItemCount() {
