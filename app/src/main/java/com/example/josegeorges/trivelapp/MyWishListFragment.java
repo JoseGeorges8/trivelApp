@@ -120,7 +120,7 @@ public class MyWishListFragment extends Fragment {
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         //if the tripPackages ArrayList is empty, then we show a text view saying that there are no packages yet.
-        if (tripPackages == null){
+        if (tripPackages.isEmpty()){
            // Log.d("JOSE", "ArrayList is empty " + tripPackages.size());
             recyclerView.setVisibility(View.GONE);
             isEmptyTextView.setVisibility(View.VISIBLE);

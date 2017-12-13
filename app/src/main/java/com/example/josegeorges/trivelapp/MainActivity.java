@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        fm = getSupportFragmentManager();
+        fm.beginTransaction().replace(R.id.content, new MyWishListFragment(), "MyWish").addToBackStack("MyWish").commit();
+
+
     }
 
     @Override
@@ -113,7 +118,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onFragmentInteraction(TripPackage tripPackage) {
         MyWishListFragment receiver = (MyWishListFragment) fm.findFragmentByTag("MyWish");
-        receiver.addToArrayList(tripPackage);
+        if(receiver != null)
+            receiver.addToArrayList(tripPackage);
         Log.d("JOSE", "Receiving listener, sending " + tripPackage.getTitle() + " to " + receiver.toString());
     }
 
