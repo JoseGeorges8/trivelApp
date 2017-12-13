@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,14 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class TripViewFragment extends Fragment {
+
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM3 = "param3";
+
+    private String mParam1;
+    private String mParam2;
+    private String mParam3;
 
     //keys for the bundle
     public static final String TITLE = "title";
@@ -128,6 +137,15 @@ public class TripViewFragment extends Fragment {
         spec.setContent(R.id.contact);
         spec.setIndicator("Contact");
         host.addTab(spec);
+
+
+        TextView titleText = view.findViewById(R.id.titleText);
+        TextView descriptionText = view.findViewById(R.id.descriptionText);
+        TextView priceText = view.findViewById(R.id.priceText);
+
+        titleText.setText(title);
+        descriptionText.setText(description);
+        priceText.setText(price);
 
         Button email = (Button) view.findViewById(R.id.email);
         Button map = (Button) view.findViewById(R.id.map);
