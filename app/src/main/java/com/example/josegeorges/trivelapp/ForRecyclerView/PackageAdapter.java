@@ -24,6 +24,7 @@ import java.util.ArrayList;
  * */
 public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
 
+
     //array of packages going to te recyclerView
     private ArrayList<TripPackage> list;
 
@@ -72,6 +73,10 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
             }
         });
     }
+
+
+
+
 
     @Override
     public int getItemCount() {
