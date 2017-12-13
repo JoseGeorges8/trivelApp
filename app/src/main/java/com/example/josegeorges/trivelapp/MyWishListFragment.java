@@ -47,9 +47,22 @@ public class MyWishListFragment extends Fragment {
     private TextView isEmptyTextView;
     private RecyclerView recyclerView;
     private ArrayList<TripPackage> tripPackages;
+    private PackageAdapter adapter;
 
     public MyWishListFragment() {
         // Required empty public constructor
+    }
+
+    //THIS METHOD IS WORKING, THEY ARE BEING ADDED BUT THEY ARE NOT DISPLAYING IN THE RECYCLERVIEW YET FOR SOME REASON
+    public void addToArrayList(TripPackage tripPackage){
+        //this if does not work
+        if(tripPackages.contains(tripPackage))
+            Log.d("JOSE", "Already in arrayList, should remove it instead");
+        else {
+            tripPackages.add(tripPackage);
+            Log.d("JOSE", "added it" );
+        }
+
     }
 
     /**
@@ -78,7 +91,6 @@ public class MyWishListFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        tripPackages = new ArrayList<>();
 
     }
 
@@ -95,15 +107,17 @@ public class MyWishListFragment extends Fragment {
         return view;
     }
 
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        tripPackages = new ArrayList<>();
+        adapter = new PackageAdapter(tripPackages, (MainActivity) this.getActivity());
+
         //setting up the recyclerView
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-
-        //POPULATE PACKAGES METHOD GOES HERE
 
         //if the tripPackages ArrayList is empty, then we show a text view saying that there are no packages yet.
         if (tripPackages.isEmpty()){
@@ -125,8 +139,9 @@ public class MyWishListFragment extends Fragment {
             recyclerView.setVisibility(View.VISIBLE);
             isEmptyTextView.setVisibility(View.GONE);
             goToPackagesButton.setVisibility(View.GONE);
-            recyclerView.setAdapter(new PackageAdapter(tripPackages, (MainActivity) this.getActivity()));
+            recyclerView.setAdapter(adapter);
         }
+
         recyclerView.setLayoutManager(myLayoutManager);
 
     }
