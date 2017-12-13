@@ -3,6 +3,8 @@ package com.example.josegeorges.trivelapp;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -133,6 +135,19 @@ public class TripViewFragment extends Fragment {
         Button web = (Button) view.findViewById(R.id.web);
         Button cal = (Button) view.findViewById(R.id.calendar);
 
+
+        /**
+         * The fab button will work as an add to favorites button.
+         */
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Snackbar.make(view, title + " added to your favorites", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+            }
+        });
 
         return view;
     }
