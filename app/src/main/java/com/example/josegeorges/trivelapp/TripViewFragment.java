@@ -1,9 +1,9 @@
 package com.example.josegeorges.trivelapp;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.os.Handler;
+import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,10 +13,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TabHost;
+import android.widget.TextView;
+import com.github.clans.fab.FloatingActionMenu;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -28,6 +30,18 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class TripViewFragment extends Fragment {
+
+
+
+    private FloatingActionMenu menuRed;
+
+    private com.github.clans.fab.FloatingActionButton fab1;
+    private com.github.clans.fab.FloatingActionButton fab2;
+    private com.github.clans.fab.FloatingActionButton fab3;
+
+
+    private List<FloatingActionMenu> menus = new ArrayList<>();
+    private Handler mUiHandler = new Handler();
 
     //keys for the bundle
     public static final String TITLE = "title";
@@ -104,6 +118,63 @@ public class TripViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tripview, container, false);
 
+        menuRed = (com.github.clans.fab.FloatingActionMenu) view.findViewById(R.id.menu_red);
+
+        fab1 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab1);
+        fab2 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab2);
+        fab3 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab3);
+
+        fab1.setLabelText(title);
+        fab2.setLabelText(description);
+        fab3.setLabelText(price);
+
+
+        /**
+         * This section will be for the onClickListeners for the 3 mini fab buttons
+         *
+         * fab1 = Whishlist
+         * fab2 = Location (map)
+         * fab3 = Add to calender
+         */
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //For wishlist
+                Snackbar.make(view, title + " added to your favorites", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+
+                TripPackage temp = new TripPackage(title, description, activities, duration, price, longitude, latitude, imagesId);
+                onFabButtonPressed(temp);
+            }
+        });
+
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //For Location
+                Snackbar.make(view, title + " fab2 was pressed", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+
+            }
+        });
+
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //For Calender
+                Snackbar.make(view, title + " fab3 was pressed", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+
+            }
+        });
+
+        menuRed.setClosedOnTouchOutside(true);
+        menuRed.hideMenuButton(false);
+
+
         /**
          * Adding the viewPager and setting the adapter
          */
@@ -124,36 +195,46 @@ public class TripViewFragment extends Fragment {
         spec.setIndicator("Activities");
         host.addTab(spec);
 
-        spec = host.newTabSpec("Contact");
-        spec.setContent(R.id.contact);
-        spec.setIndicator("Contact");
-        host.addTab(spec);
 
-        Button email = (Button) view.findViewById(R.id.email);
-        Button map = (Button) view.findViewById(R.id.map);
-        Button phone = (Button) view.findViewById(R.id.call);
-        Button web = (Button) view.findViewById(R.id.web);
-        Button cal = (Button) view.findViewById(R.id.calendar);
+        TextView titleText = view.findViewById(R.id.titleText);
+        TextView descriptionText = view.findViewById(R.id.descriptionText);
+        TextView priceText = view.findViewById(R.id.priceText);
 
-
-        /**
-         * The fab button will work as an add to favorites button.
-         */
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Snackbar.make(view, title + " added to your favorites", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-
-                TripPackage temp = new TripPackage(title, description, activities, duration, price, longitude, latitude, imagesId);
-                onFabButtonPressed(temp);
-            }
-        });
-
+        titleText.setText(title);
+        descriptionText.setText(description);
+        priceText.setText(price);
         return view;
+
     }
+
+
+
+
+    //When the activity is created the fab button is added and animated into the apps fragment
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        menus.add(menuRed);
+
+
+
+        int delay = 400;
+        for (final FloatingActionMenu menu : menus) {
+            mUiHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    menu.showMenuButton(true);
+                }
+            }, delay);
+            delay += 150;
+        }
+
+
+
+    }
+
+
 
     /**
      * @author josegeorges
