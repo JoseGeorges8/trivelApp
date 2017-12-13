@@ -1,6 +1,9 @@
 package com.example.josegeorges.trivelapp;
 
+
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -13,12 +16,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.github.clans.fab.FloatingActionMenu;
+
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 
 /**
@@ -69,6 +78,7 @@ public class TripViewFragment extends Fragment {
     public TripViewFragment() {
 
     }
+
 
     /**
      * Use this factory method to create a new instance of
@@ -124,8 +134,8 @@ public class TripViewFragment extends Fragment {
         fab2 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab2);
         fab3 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab3);
 
-        fab1.setLabelText(title);
-        fab2.setLabelText(description);
+        fab1.setLabelText("Add " + title + " to wishlist");
+        fab2.setLabelText("Map");
         fab3.setLabelText(price);
 
 
@@ -140,22 +150,33 @@ public class TripViewFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                //For wishlist
-                Snackbar.make(view, title + " added to your favorites", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
 
                 TripPackage temp = new TripPackage(title, description, activities, duration, price, longitude, latitude, imagesId);
                 onFabButtonPressed(temp);
+
+                if (menuRed.isOpened()) {
+                            Toast.makeText(getActivity(), title + " was added to the wishlist", Toast.LENGTH_SHORT).show();
+                        }
+
+                        menuRed.toggle(true);
             }
+
+
+
+
+
+
         });
 
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //For Location
-                Snackbar.make(view, title + " fab2 was pressed", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + latitude + "," + longitude + "(" + title + ")");
+                Log.d("nick", gmmIntentUri.toString());
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
 
             }
         });
@@ -199,16 +220,26 @@ public class TripViewFragment extends Fragment {
         TextView titleText = view.findViewById(R.id.titleText);
         TextView descriptionText = view.findViewById(R.id.descriptionText);
         TextView priceText = view.findViewById(R.id.priceText);
+        TextView actText = view.findViewById(R.id.actText);
+        TextView durText = view.findViewById(R.id.durText);
 
         titleText.setText(title);
         descriptionText.setText(description);
         priceText.setText(price);
+        durText.setText(duration);
+
+        StringBuilder builder = new StringBuilder();
+        for(String s : activities) {
+            builder.append(s);
+        }
+        String str = builder.toString();
+        actText.setText(str);
+
+
+
+
         return view;
-
     }
-
-
-
 
     //When the activity is created the fab button is added and animated into the apps fragment
     @Override
@@ -216,7 +247,6 @@ public class TripViewFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         menus.add(menuRed);
-
 
 
         int delay = 400;
@@ -256,12 +286,14 @@ public class TripViewFragment extends Fragment {
                 case 0: return TripImageFragment.newInstance(imagesId[0]);
                 case 1: return TripImageFragment.newInstance(imagesId[1]);
                 case 2: return TripImageFragment.newInstance(imagesId[2]);
+                case 3: return TripImageFragment.newInstance(imagesId[3]);
+                case 4: return TripImageFragment.newInstance(imagesId[4]);
                 default: return TripImageFragment.newInstance(imagesId[0]);
             }
         }
 
         public  int getCount(){
-            return 3;
+            return 5;
         }
 
     }
