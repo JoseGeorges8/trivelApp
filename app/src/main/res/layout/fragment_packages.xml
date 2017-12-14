@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.josegeorges.trivelapp.PackagesFragment">
+    tools:context="com.example.josegeorges.trivelapp.PackagesFragment"
+    android:background="@color/background">
 
     <!-- adding the recyclerView to the fragment-->
     <include layout="@layout/recycler_view"/>

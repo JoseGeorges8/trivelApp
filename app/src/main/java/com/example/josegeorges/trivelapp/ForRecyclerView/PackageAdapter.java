@@ -31,8 +31,11 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
     private MainActivity activity;
     private FragmentManager fm;
 
-
-    //constructor
+    /**
+     *
+     * @param list the list use to populate items in the recyclerView
+     * @param activity needed to create fragment transactions from this class
+     */
     public PackageAdapter(ArrayList<TripPackage> list, MainActivity activity) {
         this.list = list;
         this.activity = activity;
@@ -57,8 +60,9 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
         * I made a setOnClickListener for the relativeLayout to simulate when an item is pressed. I made it this way
         * because we only need to press the item just once and this way makes it easy.
         *
-        * UPDATE: I took the onClickListener from the PackageViewHolder and added it here. functionality works the same but now
-        * it makes it easier to work with the array of objects and pass the primitive data type to the TripViewFragment
+        * It will pass the list of tripPackages and position, so that we can locate the one we are currently
+        *   on and populate the fragment with the correct information
+        *
         * */
         holder.getTripPackage().setOnClickListener(new View.OnClickListener() {
             @Override

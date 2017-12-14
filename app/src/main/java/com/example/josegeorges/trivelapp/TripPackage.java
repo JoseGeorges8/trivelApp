@@ -11,8 +11,6 @@ package com.example.josegeorges.trivelapp;
  */
 public class TripPackage {
 
-
-
     //properties for the package
     private String title;
     private String description;
@@ -22,6 +20,7 @@ public class TripPackage {
     private String longitude;
     private String latitute;
     private int[] imagesId;
+
     //constructor
     public TripPackage(String title, String description, String[] activities, String duration, String price,
                        String longitude, String latitute, int[] imagesId){

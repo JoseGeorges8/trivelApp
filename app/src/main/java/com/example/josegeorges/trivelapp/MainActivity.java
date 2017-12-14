@@ -22,10 +22,8 @@ public class MainActivity extends AppCompatActivity
         MyWishListFragment.OnFragmentInteractionListener,
         TripImageFragment.OnFragmentInteractionListener{
 
+    //for managing fragments
     FragmentManager fm;
-
-
-    public static boolean fabIsVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +42,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //We add the WishList fragment right away so that the user can add packages to it without having to access it
+        //  at least one time
         fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.content, new MyWishListFragment(), "MyWish").addToBackStack("MyWish").commit();
 
@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity
             transaction.replace(R.id.content, new PackagesFragment());
             transaction.commit();
         } else if (id == R.id.nav_wish_list) {
+            //making sure that we always use the "MyWish" MyWishListFragment tagged
             FragmentTransaction transaction = fm.beginTransaction();
             MyWishListFragment fragment = (MyWishListFragment) fm.findFragmentByTag("MyWish");
             if(fragment != null){
@@ -105,9 +106,9 @@ public class MainActivity extends AppCompatActivity
 
             transaction.commit();
         } else if (id == R.id.nav_about_us) {
-
+                //TODO: Create a fragment for about_us section
         } else if (id == R.id.nav_credits) {
-
+                //TODO: Create a fragment for credits section
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -115,11 +116,24 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    /**
+     * This method comes from the TripViewFragment's interface OnFragmentInteractionListener.
+     *  It is used to pass the package used inside the TripViewFragment, to the WishList's ArrayList that's used
+     *  to populate the RecyclerView in it.
+     *
+     *  The main idea is that when the person presses the AddToWishList button, the package is passed in here, and
+     *  from here the fragments addToArrayList method is called
+     *
+     * @param tripPackage the package we want to add to the WishList
+     */
     @Override
     public void onFragmentInteraction(TripPackage tripPackage) {
         MyWishListFragment receiver = (MyWishListFragment) fm.findFragmentByTag("MyWish");
+        //making sure the fragment does exist.
         if(receiver != null)
             receiver.addToArrayList(tripPackage);
+
+        //DEBUGGING PURPOSES
         Log.d("JOSE", "Receiving listener, sending " + tripPackage.getTitle() + " to " + receiver.toString());
     }
 

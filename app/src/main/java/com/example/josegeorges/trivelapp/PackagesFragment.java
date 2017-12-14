@@ -17,16 +17,10 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
+/*
+This fragment will be showing the current Packages Trivel offers
+ */
 public class PackagesFragment extends Fragment {
-
-//    //names for the keys in the bundle
-//    private static final String ARG_PARAM1 = "param1";
-//    private static final String ARG_PARAM2 = "param2";
-//
-//    //variables
-//    private String mParam1;
-//    private String mParam2;
 
 
     private OnFragmentInteractionListener mListener;
@@ -40,15 +34,6 @@ public class PackagesFragment extends Fragment {
 
     }
 
-//    public static PackagesFragment newInstance(String param1, String param2) {
-//        PackagesFragment fragment = new PackagesFragment();
-//        Bundle args = new Bundle();
-//        args.putString(ARG_PARAM1, param1);
-//        args.putString(ARG_PARAM2, param2);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,11 +41,10 @@ public class PackagesFragment extends Fragment {
         tripPackages = new ArrayList<>();
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //inflating the view
         View view = inflater.inflate(R.layout.fragment_packages, container, false);
 
         //linking the recyclerView
@@ -74,9 +58,10 @@ public class PackagesFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
 
-        //setting up the recyclerView
+        //setting up the layoutManager
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        //populating packages
         populatePackages();
         //making sure that everything is set up first
         if (tripPackages.size() > 0 & recyclerView != null) {
@@ -92,6 +77,8 @@ public class PackagesFragment extends Fragment {
     * This method is momentary to test the recyclerView and make sure everything is working.
     * is creating a couple of arrays that are going to create several packages and add them into an ArrayList of packages.
     * This packages are going to the adapter to inflate the layout.
+    *
+    * //TODO: externalize this method to have its on class that populates Packages.
     * */
     public void populatePackages(){
         tripPackages.clear();
@@ -143,6 +130,13 @@ public class PackagesFragment extends Fragment {
       }
     }
 
+    /*
+
+The code below comes with the Fragment to create interaction between Fragments
+    it is not being used but left it in case of need for future usage.
+
+     */
+
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -166,18 +160,7 @@ public class PackagesFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }
