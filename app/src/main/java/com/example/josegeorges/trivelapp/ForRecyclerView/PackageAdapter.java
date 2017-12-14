@@ -70,6 +70,7 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
                 Log.d("JOSE", list.get(position).getTitle() + " was pressed");
                 fm = activity.getSupportFragmentManager();
                 FragmentTransaction transaction = fm.beginTransaction();
+                transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out);
                 transaction.replace(R.id.content, TripViewFragment.newInstance(list, position));
                 transaction.addToBackStack(null);
                 transaction.commit();
