@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.CalendarContract;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -25,6 +26,7 @@ import com.github.clans.fab.FloatingActionMenu;
 
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -136,7 +138,7 @@ public class TripViewFragment extends Fragment {
 
         fab1.setLabelText("Add " + title + " to wishlist");
         fab2.setLabelText("Map");
-        fab3.setLabelText(price);
+        fab3.setLabelText("Add trip to your Calendar");
 
 
         /**
@@ -186,8 +188,26 @@ public class TripViewFragment extends Fragment {
             public void onClick(View view) {
 
                 //For Calender
-                Snackbar.make(view, title + " fab3 was pressed", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
+                String eventTitle = "Upcoming Trip";
+                long startMillis = 0;
+                long endMillis = 0;
+                Calendar beginTime = Calendar.getInstance();
+                beginTime.set(2017,9,14,7,30);
+                startMillis = beginTime.getTimeInMillis();
+                Calendar endTime = Calendar.getInstance();
+                endTime.set(2017,9,14,9,30);
+                endMillis = endTime.getTimeInMillis();
+
+
+                Intent intent = new Intent(Intent.ACTION_INSERT);
+                intent.setData(CalendarContract.Events.CONTENT_URI);
+                intent.putExtra(CalendarContract.Events.TITLE, eventTitle);
+                intent.putExtra(CalendarContract.Events.EVENT_LOCATION, title);
+                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startMillis);
+                intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endMillis);
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(intent);
+                }
 
             }
         });
@@ -225,8 +245,8 @@ public class TripViewFragment extends Fragment {
 
         titleText.setText(title);
         descriptionText.setText(description);
-        priceText.setText(price);
-        durText.setText(duration);
+        priceText.setText("Price of Trip: " + price);
+        durText.setText("Duration of trip: " + duration);
 
         StringBuilder builder = new StringBuilder();
         for(String s : activities) {
