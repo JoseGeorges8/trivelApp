@@ -217,6 +217,9 @@ public class TripViewFragment extends Fragment {
         spec.setIndicator("Activities");
         host.addTab(spec);
 
+        //animating the tabs
+        host.setOnTabChangedListener(new AnimationTabListener(getContext(), host));
+
         TextView titleText = view.findViewById(R.id.titleText);
         TextView descriptionText = view.findViewById(R.id.descriptionText);
         TextView priceText = view.findViewById(R.id.priceText);
