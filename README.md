@@ -7,6 +7,13 @@ to a few in a younger audience that would like to travel the world before they s
 
 `git config --global user.email` `<<<YOUR EMAIL HERE>>>`
 
+##Pictures Of our App
+![alt text](Mainpic1.png "Designed GUI")
+![alt text](Mainpic2.png "Designed GUI")
+![alt text](Mainpic3.png "Designed GUI")
+![alt text](Mainpic4.png "Designed GUI")
+
+
 ## Commiting Instructions
 
 Download/Clone the project from the repository
