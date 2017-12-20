@@ -106,7 +106,9 @@ public class MainActivity extends AppCompatActivity
 
             transaction.commit();
         } else if (id == R.id.nav_about_us) {
-                //TODO: Create a fragment for about_us section
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.content, new AboutUsFragment());
+            transaction.commit();
         } else if (id == R.id.nav_credits) {
                 //TODO: Create a fragment for credits section
         }
