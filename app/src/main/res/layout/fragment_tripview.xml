@@ -7,6 +7,12 @@
     tools:context="com.example.josegeorges.trivelapp.TripViewFragment"
     android:background="@color/background">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <TextView
         android:id="@+id/titleText"
         android:layout_width="match_parent"
@@ -45,51 +51,56 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/description"
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/priceText"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/description"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:elevation="7dp"
-                        android:text="TextView"
-                        android:padding="@dimen/padding"/>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/durText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView"
-                        android:padding="@dimen/padding"/>
+                        <TextView
+                            android:id="@+id/priceText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="7dp"
+                            android:text="TextView"
+                            android:padding="@dimen/padding"/>
 
-                    <TextView
-                        android:id="@+id/descriptionText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="DesText"
-                        android:padding="@dimen/padding"/>
+                        <TextView
+                            android:id="@+id/durText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:padding="@dimen/padding"/>
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/descriptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DesText"
+                            android:padding="@dimen/padding"/>
 
-                <LinearLayout
-                    android:id="@+id/activities"
+                    </LinearLayout>
+                </ScrollView>
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/actText"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/activities"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="ActText"
-                        android:padding="@dimen/padding"/>
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
+                        <TextView
+                            android:id="@+id/actText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ActText"
+                            android:padding="@dimen/padding"/>
+                    </LinearLayout>
+                </ScrollView>
             </FrameLayout>
         </LinearLayout>
 
@@ -147,6 +158,5 @@
         </RelativeLayout>
 
     </TabHost>
-
-
+    </LinearLayout>
 </LinearLayout>
