@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/salesrep_items">
+
+    <ImageView
+        android:id="@+id/salesrep_imageView"
+        android:layout_width="@dimen/salesrep_image_width"
+        android:layout_height="@dimen/salesrep_image_height"
+        android:layout_margin="@dimen/salesrep_image_margin"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@color/background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/salesrep_imageView"
+        android:layout_toEndOf="@+id/salesrep_imageView"
+        android:layout_toRightOf="@+id/salesrep_imageView"
+        android:text="Sales Representative" />
+
+    <ImageView
+        android:layout_width="@dimen/salesrep_icon_width"
+        android:layout_height="@dimen/salesrep_icon_height"
+        android:layout_margin="@dimen/salesrep_icon_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_call_black_24dp"
+        android:id="@+id/salesrep_call" />
+
+    <ImageView
+        android:layout_width="@dimen/salesrep_icon_width"
+        android:layout_height="@dimen/salesrep_icon_height"
+        android:layout_margin="@dimen/salesrep_icon_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/salesrep_imageView"
+        android:src="@drawable/ic_email_black_24dp"
+        android:id="@+id/salesrep_email" />
+
+</RelativeLayout>
