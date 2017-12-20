@@ -22,6 +22,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 
 
@@ -153,10 +154,9 @@ public class TripViewFragment extends Fragment {
 
 
                 TripPackage temp = new TripPackage(title, description, activities, duration, price, longitude, latitude, imagesId);
-                onFabButtonPressed(temp);
+                onFabButtonPressed(temp, fab1);
 
                 if (menuRed.isOpened()) {
-                    Toast.makeText(getActivity(), title + " was added to the wishlist", Toast.LENGTH_SHORT).show();
                 }
                 menuRed.toggle(true);
             }
@@ -338,12 +338,12 @@ public class TripViewFragment extends Fragment {
         which implements this interface.
      */
     public interface OnFragmentInteractionListener {
-        void onFragmentInteraction(TripPackage tripPackage);
+        void onFragmentInteraction(TripPackage tripPackage, FloatingActionButton fab);
     }
 
-    public void onFabButtonPressed(TripPackage tripPackage) {
+    public void onFabButtonPressed(TripPackage tripPackage, FloatingActionButton fab) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(tripPackage);
+            mListener.onFragmentInteraction(tripPackage, fab);
         }
     }
 }

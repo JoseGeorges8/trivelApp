@@ -15,8 +15,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.josegeorges.trivelapp.ForRecyclerView.PackageAdapter;
+import com.github.clans.fab.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -54,7 +56,7 @@ public class MyWishListFragment extends Fragment {
      *
      * @param tripPackage package selected by the user in the TripViewFragment
      */
-    public void addToArrayList(TripPackage tripPackage){
+    public void addToArrayList(TripPackage tripPackage, FloatingActionButton fab){
         boolean contained = false;
         for(int i = 0; i < tripPackages.size(); i++){
             if(tripPackage.getTitle() == tripPackages.get(i).getTitle()) {
@@ -63,15 +65,15 @@ public class MyWishListFragment extends Fragment {
                 break;
             }
         }
-        if(contained)
-            //DEBUGGING PURPOSES
-            Log.d("JOSE", "Already in arrayList, should remove it instead");
+        if(contained) {
+            fab.setLabelText("Add " + tripPackage.getTitle() + " to wishlist");
+            Toast.makeText(getActivity(), tripPackage.getTitle() + " was removed from the wishlist", Toast.LENGTH_SHORT).show();
+        }
         else {
             tripPackages.add(tripPackage);
             adapter.notifyDataSetChanged();
-
-            //DEBUGGING PURPOSES
-            Log.d("JOSE", "added it " + tripPackages.size() );
+            fab.setLabelText("Remove " + tripPackage.getTitle() + " from the wishlist");
+            Toast.makeText(getActivity(), tripPackage.getTitle() + " was added to the wishlist", Toast.LENGTH_SHORT).show();
         }
     }
 

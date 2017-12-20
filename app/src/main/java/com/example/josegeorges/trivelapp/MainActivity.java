@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.github.clans.fab.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         PackagesFragment.OnFragmentInteractionListener,
@@ -129,11 +131,11 @@ public class MainActivity extends AppCompatActivity
      * @param tripPackage the package we want to add to the WishList
      */
     @Override
-    public void onFragmentInteraction(TripPackage tripPackage) {
+    public void onFragmentInteraction(TripPackage tripPackage, FloatingActionButton fab) {
         MyWishListFragment receiver = (MyWishListFragment) fm.findFragmentByTag("MyWish");
         //making sure the fragment does exist.
         if(receiver != null)
-            receiver.addToArrayList(tripPackage);
+            receiver.addToArrayList(tripPackage, fab);
 
         //DEBUGGING PURPOSES
         Log.d("JOSE", "Receiving listener, sending " + tripPackage.getTitle() + " to " + receiver.toString());
