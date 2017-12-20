@@ -51,7 +51,7 @@ public class SalesRepAdapter extends RecyclerView.Adapter<SalesRepViewHolder> {
         holder.getSalesRep_name().setText(list.get(position).getName());
         holder.getSalesRep_phone().setImageResource(R.drawable.ic_call_black_24dp);
         holder.getSalesRep_email().setImageResource(R.drawable.ic_email_black_24dp);
-        
+
     }
 
     @Override
