@@ -2,6 +2,7 @@ package com.example.josegeorges.trivelapp.ForRecyclerView;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,11 +47,25 @@ public class SalesRepAdapter extends RecyclerView.Adapter<SalesRepViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(SalesRepViewHolder holder, int position) {
+    public void onBindViewHolder(SalesRepViewHolder holder, final int position) {
         holder.getSalesRep_image().setImageResource(list.get(position).getImageID());
         holder.getSalesRep_name().setText(list.get(position).getName());
         holder.getSalesRep_phone().setImageResource(R.drawable.ic_call_black_24dp);
         holder.getSalesRep_email().setImageResource(R.drawable.ic_email_black_24dp);
+
+        holder.getSalesRep_phone().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("INTENTS", "Calling " + list.get(position).getPhone());
+            }
+        });
+
+        holder.getSalesRep_email().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("INTENTS", "Emailing " + list.get(position).getEmail());
+            }
+        });
 
     }
 

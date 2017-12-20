@@ -80,7 +80,7 @@ public class AboutUsFragment extends Fragment {
         String[] names = {"Jose", "Nick"};
         String[] emails = {"georges.elboutros@gmail.com", "nick@gmail.com"};
         String[] phones = {"2262022111", "222222222"};
-        int[] imagesID = {R.drawable.ic_group_black_24dp, R.drawable.ic_group_black_24dp};
+        int[] imagesID = {R.drawable.jose, R.drawable.ic_group_black_24dp};
         for(int i = 0; i < names.length; i++){
             SalesRep salesRep = new SalesRep(names[i], emails[i], phones[i], imagesID[i]);
             salesReps.add(salesRep);
