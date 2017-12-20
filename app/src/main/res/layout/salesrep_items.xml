@@ -2,11 +2,19 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/salesrep_items">
 
     <!--Simple layout of how the sales rep will look like in the recyclerView-->
-
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/salesrep_imageView"
+        android:layout_width="@dimen/salesrep_image_width"
+        android:layout_height="@dimen/salesrep_image_height"
+        android:layout_margin="@dimen/salesrep_image_margin"
+        android:src="@color/background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+  <!--
     <ImageView
         android:id="@+id/salesrep_imageView"
         android:layout_width="@dimen/salesrep_image_width"
@@ -15,6 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:src="@color/background"/>
+        -->
 
     <TextView
         android:id="@+id/salesrep_name"
