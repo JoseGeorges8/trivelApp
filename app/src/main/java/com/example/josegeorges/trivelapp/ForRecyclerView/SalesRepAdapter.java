@@ -1,5 +1,8 @@
 package com.example.josegeorges.trivelapp.ForRecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
+import android.provider.ContactsContract;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -57,6 +60,11 @@ public class SalesRepAdapter extends RecyclerView.Adapter<SalesRepViewHolder> {
             @Override
             public void onClick(View view) {
                 Log.d("INTENTS", "Calling " + list.get(position).getPhone());
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + list.get(position).getPhone()));
+                if(intent.resolveActivity(activity.getPackageManager()) != null){
+                    activity.startActivity(intent);
+                }
             }
         });
 
@@ -64,6 +72,15 @@ public class SalesRepAdapter extends RecyclerView.Adapter<SalesRepViewHolder> {
             @Override
             public void onClick(View view) {
                 Log.d("INTENTS", "Emailing " + list.get(position).getEmail());
+                String[] emailAddress = {list.get(position).getEmail()};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Book trip");
+                intent.putExtra(Intent.EXTRA_TEXT, "Hey " + list.get(position).getName() + " I was contacting you about...");
+                if(intent.resolveActivity(activity.getPackageManager()) != null){
+                    activity.startActivity(intent);
+                }
             }
         });
 
