@@ -17,6 +17,7 @@
         android:src="@color/background"/>
 
     <TextView
+        android:id="@+id/salesrep_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/salesrep_imageView"
