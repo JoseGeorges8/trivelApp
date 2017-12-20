@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:id="@+id/salesrep_items">
 
+    <!--Simple layout of how the sales rep will look like in the recyclerView-->
+
     <ImageView
         android:id="@+id/salesrep_imageView"
         android:layout_width="@dimen/salesrep_image_width"
