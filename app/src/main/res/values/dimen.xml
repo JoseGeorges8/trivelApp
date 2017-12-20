@@ -21,5 +21,9 @@
     <dimen name="salesrep_image_height">96dp</dimen>
     <dimen name="salesrep_image_margin">8dp</dimen>
 
+    <!-- Some general dimensions-->
+    <dimen name="padding">8dp</dimen>
+    <dimen name="margin">8dp</dimen>
+
 
 </resources>
