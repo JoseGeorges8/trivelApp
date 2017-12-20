@@ -14,8 +14,8 @@
     <dimen name="title_size">24sp</dimen>
 
     <!-- Dimensions for each item inside the recyclerView (salesrep)-->
-    <dimen name="salesrep_icon_width">40dp</dimen>
-    <dimen name="salesrep_icon_height">40dp</dimen>
+    <dimen name="salesrep_icon_width">30dp</dimen>
+    <dimen name="salesrep_icon_height">30dp</dimen>
     <dimen name="salesrep_icon_margin">4dp</dimen>
     <dimen name="salesrep_image_width">96dp</dimen>
     <dimen name="salesrep_image_height">96dp</dimen>

@@ -44,12 +44,14 @@
         android:id="@+id/salesrep_call" />
 
     <ImageView
+        android:id="@+id/salesrep_email"
         android:layout_width="@dimen/salesrep_icon_width"
         android:layout_height="@dimen/salesrep_icon_height"
+        android:layout_alignLeft="@+id/salesrep_call"
+        android:layout_alignStart="@+id/salesrep_call"
+        android:layout_below="@+id/salesrep_call"
         android:layout_margin="@dimen/salesrep_icon_margin"
-        android:layout_alignParentRight="true"
-        android:layout_alignBottom="@+id/salesrep_imageView"
-        android:src="@drawable/ic_email_black_24dp"
-        android:id="@+id/salesrep_email" />
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_email_black_24dp" />
 
 </RelativeLayout>
