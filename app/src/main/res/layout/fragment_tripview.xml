@@ -121,7 +121,7 @@
                     android:id="@+id/fab1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_edit"
+                    android:src="@drawable/ic_favorite_black_24dp"
                     app:fab_label="Disabled"
                     app:fab_size="mini"
                     app:fab_colorNormal="@color/colorAccent"

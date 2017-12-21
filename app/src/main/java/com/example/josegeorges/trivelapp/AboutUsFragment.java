@@ -78,8 +78,8 @@ public class AboutUsFragment extends Fragment {
 
     public void populatePackages(){
         String[] names = {"Jose Georges", "Nick Stajduhar"};
-        String[] emails = {"georges.elboutros@gmail.com", "nick@gmail.com"};
-        String[] phones = {"2262022111", "222222222"};
+        String[] emails = {"josegeorges@trivelagency.com", "nickstajduhar@trivelagency.com"};
+        String[] phones = {"8888888888", "222222222"};
         int[] imagesID = {R.drawable.jose, R.drawable.nick};
         for(int i = 0; i < names.length; i++){
             SalesRep salesRep = new SalesRep(names[i], emails[i], phones[i], imagesID[i]);
