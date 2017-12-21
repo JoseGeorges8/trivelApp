@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
+import com.rd.PageIndicatorView;
 
 
 import java.util.ArrayList;
@@ -126,6 +127,11 @@ public class TripViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         //inflating the view
         View view = inflater.inflate(R.layout.fragment_tripview, container, false);
+
+
+        PageIndicatorView pageIndicatorView = view.findViewById(R.id.pageIndicatorView);
+        pageIndicatorView.setCount(4); // specify total count of indicators
+        pageIndicatorView.setSelection(0);
 
         menuRed = (com.github.clans.fab.FloatingActionMenu) view.findViewById(R.id.menu_red);
 
@@ -294,7 +300,6 @@ public class TripViewFragment extends Fragment {
             super(fm);
 
         }
-
 
         //position tells the program what fragment we are currently on/displaying
         public Fragment getItem(int position){
