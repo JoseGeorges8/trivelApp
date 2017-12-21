@@ -64,10 +64,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
                     <LinearLayout
                         android:id="@+id/description"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
@@ -75,26 +79,26 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:elevation="7dp"
-                            android:text="TextView"
-                            android:padding="@dimen/padding"/>
+                            android:padding="@dimen/padding"
+                            android:text="TextView" />
 
                         <TextView
                             android:id="@+id/durText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="TextView"
-                            android:padding="@dimen/padding"/>
+                            android:padding="@dimen/padding"
+                            android:text="TextView" />
 
                         <TextView
                             android:id="@+id/descriptionText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="DesText"
-                            android:padding="@dimen/padding"/>
+                            android:padding="@dimen/padding"
+                            android:text="DesText" />
 
                     </LinearLayout>
-
-                    <LinearLayout
+                </ScrollView>
+                <LinearLayout
                         android:id="@+id/activities"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -107,6 +111,7 @@
                             android:text="ActText"
                             android:padding="@dimen/padding"/>
                     </LinearLayout>
+
             </FrameLayout>
         </LinearLayout>
 
