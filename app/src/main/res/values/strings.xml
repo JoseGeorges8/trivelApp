@@ -29,6 +29,7 @@
         Suspendisse et auctor nisl. Nunc facilisis convallis libero, a molestie risus commodo sit amet.
         Aenean consectetur magna nec lectus tempor, ac commodo tortor tempor. Aliquam cursus nec elit eget volutpat.
         Vestibulum eu ultrices velit, mattis fringilla justo.</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 
 </resources>
