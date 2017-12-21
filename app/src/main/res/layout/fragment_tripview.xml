@@ -7,6 +7,12 @@
     tools:context="com.example.josegeorges.trivelapp.TripViewFragment"
     android:background="@color/background">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <TextView
         android:id="@+id/titleText"
         android:layout_width="match_parent"
@@ -45,50 +51,56 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/description"
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/priceText"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/description"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:elevation="7dp"
-                        android:text="TextView"
-                        android:textAlignment="center" />
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/durText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView"
-                        android:textAlignment="center" />
+                        <TextView
+                            android:id="@+id/priceText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="7dp"
+                            android:text="TextView"
+                            android:padding="@dimen/padding"/>
 
-                    <TextView
-                        android:id="@+id/descriptionText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="DesText" />
+                        <TextView
+                            android:id="@+id/durText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:padding="@dimen/padding"/>
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/descriptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DesText"
+                            android:padding="@dimen/padding"/>
 
-                <LinearLayout
-                    android:id="@+id/activities"
+                    </LinearLayout>
+                </ScrollView>
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/actText"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/activities"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="ActText" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
+                        <TextView
+                            android:id="@+id/actText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ActText"
+                            android:padding="@dimen/padding"/>
+                    </LinearLayout>
+                </ScrollView>
             </FrameLayout>
         </LinearLayout>
 
@@ -104,7 +116,10 @@
                 android:layout_alignParentRight="true"
                 android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp">
+                android:paddingRight="10dp"
+                app:menu_colorNormal="@color/colorAccent"
+                app:menu_colorPressed="@color/colorPrimary"
+                >
 
                 <com.github.clans.fab.FloatingActionButton
                     android:id="@+id/fab1"
@@ -112,7 +127,10 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_edit"
                     app:fab_label="Disabled"
-                    app:fab_size="mini" />
+                    app:fab_size="mini"
+                    app:fab_colorNormal="@color/colorAccent"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    />
 
                 <com.github.clans.fab.FloatingActionButton
                     android:id="@+id/fab2"
@@ -120,7 +138,10 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_edit"
                     app:fab_label="Remove button"
-                    app:fab_size="mini" />
+                    app:fab_size="mini"
+                    app:fab_colorNormal="@color/colorAccent"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    />
 
                 <com.github.clans.fab.FloatingActionButton
                     android:id="@+id/fab3"
@@ -128,12 +149,14 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_edit"
                     app:fab_label="Restore Button"
-                    app:fab_size="mini" />
+                    app:fab_size="mini"
+                    app:fab_colorNormal="@color/colorAccent"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    />
 
             </com.github.clans.fab.FloatingActionMenu>
         </RelativeLayout>
 
     </TabHost>
-
-
+    </LinearLayout>
 </LinearLayout>

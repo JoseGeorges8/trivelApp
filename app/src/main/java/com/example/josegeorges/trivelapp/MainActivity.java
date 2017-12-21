@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity
         //  at least one time
         fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.content, new MyWishListFragment(), "MyWish").addToBackStack("MyWish").commit();
-
+        //starting fragment
+        fm.beginTransaction().replace(R.id.content, new AboutUsFragment()).commit();
 
     }
 
