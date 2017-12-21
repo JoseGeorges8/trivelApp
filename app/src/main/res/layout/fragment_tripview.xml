@@ -7,8 +7,6 @@
     tools:context="com.example.josegeorges.trivelapp.TripViewFragment"
     android:background="@color/background">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:id="@+id/titleText"
         android:layout_width="match_parent"
