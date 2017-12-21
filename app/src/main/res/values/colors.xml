@@ -5,6 +5,7 @@
     <color name="colorAccent">#fb8c00</color>
     <color name="app_primary">#1976D2</color>
     <color name="app_primary_dark">#1565C0</color>
+    <color name="indicatorNot">#3c3f41</color>
     <color name="grey">#DDDDDD</color>
     <color name="light_grey">#EEEEEE</color>
     <color name="white_transparent">#99FFFFFF</color>

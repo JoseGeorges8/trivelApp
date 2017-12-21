@@ -33,7 +33,19 @@
 
         </android.support.v4.view.ViewPager>
     </FrameLayout>
-
+        <com.rd.PageIndicatorView
+            android:id="@+id/pageIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:piv_animationType="swap"
+            app:piv_dynamicCount="true"
+            app:piv_interactiveAnimation="true"
+            app:piv_viewPager="@id/tripView_viewPager"
+            android:layout_gravity="center"
+            app:piv_selectedColor="@color/colorAccent"
+            app:piv_unselectedColor="@color/indicatorNot"
+ />
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
