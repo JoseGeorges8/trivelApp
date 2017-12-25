@@ -10,36 +10,25 @@ import android.view.View;
 
 /**
  * Created by josegeorges on 2017-12-25.
+ This class is used to create the division between items in the recyclerView.
+ The only reason why I decided to extend itemDecoration and create a custom one
+    is to be able to not add the decoration to the last item.
  */
-
 public class RecyclerViewDivider extends RecyclerView.ItemDecoration{
-    
+
     private Drawable divider;
-    private static final int[] ATTRS = new int[]{android.R.attr.listDivider};
 
-    /**
-     * Default divider will be used
-     */
-    public RecyclerViewDivider(Context context) {
-        final TypedArray styledAttributes = context.obtainStyledAttributes(ATTRS);
-        divider = styledAttributes.getDrawable(0);
-        styledAttributes.recycle();
-    }
-
-    /**
-     * Custom divider will be used
-     */
     public RecyclerViewDivider(Context context, int resId) {
         divider = ContextCompat.getDrawable(context, resId);
     }
 
     @Override
-    public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
+    public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
         int left = parent.getPaddingLeft();
         int right = parent.getWidth() - parent.getPaddingRight();
-
         int childCount = parent.getChildCount();
-        for (int i = 0; i < childCount; i++) {
+
+        for (int i = 0; i < childCount - 1; i++) {
             View child = parent.getChildAt(i);
 
             RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();

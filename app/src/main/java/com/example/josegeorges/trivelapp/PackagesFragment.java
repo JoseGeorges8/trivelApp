@@ -64,7 +64,7 @@ public class PackagesFragment extends Fragment {
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         //Setting up the Divider
-        DividerItemDecoration itemDecoration = new DividerItemDecoration(recyclerView.getContext(), myLayoutManager.getOrientation());
+        RecyclerViewDivider itemDecoration = new RecyclerViewDivider(recyclerView.getContext(), R.drawable.recycler_divider);
         //populating packages
         populatePackages();
         //making sure that everything is set up first
