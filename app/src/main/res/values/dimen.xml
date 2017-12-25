@@ -31,6 +31,8 @@
     <dimen name="margin">8dp</dimen>
     <dimen name="title_size">20sp</dimen>
     <dimen name="subtitle_size">16sp</dimen>
+    <dimen name="button_text_size">15sp</dimen>
+    <dimen name="display_size">45sp</dimen>
 
 
 </resources>

@@ -16,7 +16,7 @@
             <TextView
                 android:fontFamily="@font/roboto_medium"
                 android:textSize="@dimen/title_size"
-                android:text="TITLE"
+                android:text="ABOUT TRIVEL"
                 android:padding="@dimen/padding"
                 android:id="@+id/aboutUs_title"
                 android:layout_width="match_parent"
