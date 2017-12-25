@@ -47,7 +47,7 @@ public class PackagesFragment extends Fragment {
                              Bundle savedInstanceState) {
         //inflating the view
         View view = inflater.inflate(R.layout.fragment_packages, container, false);
-
+        getActivity().setTitle(R.string.our_packages);
         //linking the recyclerView
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
 

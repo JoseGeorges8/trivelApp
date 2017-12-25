@@ -127,7 +127,7 @@ public class TripViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         //inflating the view
         View view = inflater.inflate(R.layout.fragment_tripview, container, false);
-
+        getActivity().setTitle(title);
 
         PageIndicatorView pageIndicatorView = view.findViewById(R.id.pageIndicatorView);
         pageIndicatorView.setCount(4); // specify total count of indicators

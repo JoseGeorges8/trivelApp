@@ -89,7 +89,7 @@ public class MyWishListFragment extends Fragment {
                              Bundle savedInstanceState) {
         //inflating the view
         View view = inflater.inflate(R.layout.fragment_my_wish_list, container, false);
-
+        getActivity().setTitle(R.string.wish_list);
         //linking the views
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         isEmptyTextView = (TextView) view.findViewById(R.id.isEmpty_TextView);

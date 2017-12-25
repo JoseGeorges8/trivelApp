@@ -54,6 +54,7 @@ public class AboutUsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_about_us2, container, false);
+        getActivity().setTitle(R.string.about_us);
         recyclerView = (RecyclerView) view.findViewById(R.id.aboutUs_recyclerView);
         return view;
     }
