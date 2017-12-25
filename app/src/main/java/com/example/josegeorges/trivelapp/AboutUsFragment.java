@@ -4,6 +4,7 @@ package com.example.josegeorges.trivelapp;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -66,6 +67,8 @@ public class AboutUsFragment extends Fragment {
         //setting up the layoutManager
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        //Setting up the Divider
+        DividerItemDecoration itemDecoration = new DividerItemDecoration(recyclerView.getContext(), myLayoutManager.getOrientation());
         //populating packages
         populatePackages();
         //making sure that everything is set up first
@@ -73,6 +76,7 @@ public class AboutUsFragment extends Fragment {
             recyclerView.setAdapter(new SalesRepAdapter(salesReps, (MainActivity) this.getActivity()));
         }
         recyclerView.setLayoutManager(myLayoutManager);
+        recyclerView.addItemDecoration(itemDecoration);
 
     }
 
