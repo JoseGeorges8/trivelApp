@@ -77,6 +77,7 @@ public class AboutUsFragment extends Fragment {
     }
 
     public void populatePackages(){
+        salesReps.clear();
         String[] names = {"Jose Georges", "Nick Stajduhar"};
         String[] emails = {"josegeorges@trivelagency.com", "nickstajduhar@trivelagency.com"};
         String[] phones = {"8888888888", "222222222"};

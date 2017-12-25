@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -97,6 +98,9 @@ public class MyWishListFragment extends Fragment {
         //setting up the layoutManager
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        //Setting up the Divider
+        DividerItemDecoration itemDecoration = new DividerItemDecoration(recyclerView.getContext(), myLayoutManager.getOrientation());
+
 
         //if the tripPackages ArrayList is empty, then we show a text view saying that there are no packages yet.
         if (tripPackages.isEmpty()){
@@ -130,6 +134,7 @@ public class MyWishListFragment extends Fragment {
         //setting layoutManager and adapter to the recyclerView
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(myLayoutManager);
+        recyclerView.addItemDecoration(itemDecoration);
         return view;
     }
 
