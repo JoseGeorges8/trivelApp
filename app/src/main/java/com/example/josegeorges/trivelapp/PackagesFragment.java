@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -46,7 +47,7 @@ public class PackagesFragment extends Fragment {
                              Bundle savedInstanceState) {
         //inflating the view
         View view = inflater.inflate(R.layout.fragment_packages, container, false);
-
+        getActivity().setTitle(R.string.our_packages);
         //linking the recyclerView
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
 
@@ -58,9 +59,12 @@ public class PackagesFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
 
+
         //setting up the layoutManager
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        //Setting up the Divider
+        RecyclerViewDivider itemDecoration = new RecyclerViewDivider(recyclerView.getContext(), R.drawable.recycler_divider);
         //populating packages
         populatePackages();
         //making sure that everything is set up first
@@ -68,7 +72,7 @@ public class PackagesFragment extends Fragment {
             recyclerView.setAdapter(new PackageAdapter(tripPackages, (MainActivity) this.getActivity()));
         }
         recyclerView.setLayoutManager(myLayoutManager);
-
+        recyclerView.addItemDecoration(itemDecoration);
     }
 
 

@@ -61,7 +61,7 @@ public class TripImageFragment extends Fragment {
         //simply set the image to the received image
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
         imageView.setImageResource(image);
-
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 
         return view;
     }
