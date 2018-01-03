@@ -32,4 +32,8 @@
     <string name="title_activity_main2">Main2Activity</string>
 
 
+    <string name="aboutLibraries_description_showIcon">true</string>
+    <string name="aboutLibraries_description_showVersion">true</string>
+    <string name="aboutLibraries_description_text">Trivel is a travel agency app made by Jose Georges and Nick Stajduhar. 2nd Year Mobile App Development Students</string>
+
 </resources>
