@@ -21,7 +21,7 @@ public class PackagesCreater {
         //title for each object
         String[] titles = {"Lossy Villa", "Puerto Viana Resort", "Now Dominicano Resort",
                 "Blue Sway Resort", "Water Bay Resort", "Free Wind Water", "Glitter Canyon Resort",
-                "High Blue Resort", "Now Viaje", "Great Hawk Lodge"};
+                "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion"};
         //description for each object
         String[] descriptions = {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
                 "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown " +
@@ -51,9 +51,17 @@ public class PackagesCreater {
                         " 5 resturants. There's something for everyone in the family to do and a great way to get your family off those phones and out in the water." +
                         " Book Today",
                 //Description 11
-                "description11",
+                "Spend some time in this luxury resort located in the Margarita Island in Venezuela. " +
+                        "With more than 3 restaurants, you get access to all the meals and snacks the whole day. " +
+                        "Also, you have unlimited drinks included! (both alcoholic and non-alcoholic, exclusion applies). " +
+                        "Relax and enjoy the quiet ocean on their white sand beach, with view to the island/’s lighthouse. " +
+                        "This trip is perfect if you are looking to just get away of your daily routine.",
                 //Description 12
-                "description12",
+                "You will feel like living a royal life staying at this luxury greek hotel. " +
+                        "Located in the beautiful city of Santorini,  you are going to be able to get " +
+                        "away from your responsibilities and escape to this palace of pleasure and relax. " +
+                        "Start your day with a beautiful blue ocean view, and stay all day enjoying of massages, " +
+                        "beautiful pools and the nice sound of silence.",
                 //Description 13
                 "description13",
                 //Description 14
@@ -93,8 +101,21 @@ public class PackagesCreater {
                 "\u2022 Safari Adventure\n" +
                 "\u2022 Variety of Restaurants\n" +
                 "\u2022 Play miniature golf.\n"};
-        String[] activities11 = {"3"};
-        String[] activities12 = {"3"};
+        String[] activities11 = {"\u2022 Excursion to the lighthouse\n" +
+                "\u2022 Yoga in the beach\n" +
+                "\u2022 Aerobics at the pool area\n" +
+                "\u2022 Bingo every night after exclusive night theatre show\n" +
+                "\u2022 All night disco club for grown ups!\n" +
+                "\u2022 Movie theatre with different functions everyday.\n"+
+                "\u2022 Multiple aquatic games at the pool area.\n"+
+                "\u2022 Rent of bikes.\n"+
+                "\u2022 Free access to the hotel’s gym.\n"+
+                "\u2022 Karaoke Thursday!\n"};
+        String[] activities12 = {"\u2022 Massages\n" +
+                "\u2022 Excursion through the beautiful seas outside Greece\n" +
+                "\u2022 Scuba diving classes\n" +
+                "\u2022 Hiking Excursion\n" +
+                "\u2022 Cooking class and wine testing\n"};
         String[] activities13 = {"3"};
         String[] activities14 = {"3"};
         String[] activities15 = {"3"};
@@ -148,9 +169,9 @@ public class PackagesCreater {
                 //Duration 10
                 "3 Days",
                 //Duration 11
-                "11",
+                "5 nights and 6 days.",
                 //Duration 12
-                "12",
+                "3 nights and 4 days.",
                 //Duration 13
                 "13",
                 //Duration 14
@@ -188,9 +209,9 @@ public class PackagesCreater {
                 //Price 10
                 "$2616",
                 //Price 11
-                "11",
+                "$1500",
                 //Price 12
-                "12",
+                "$2390",
                 //Price 13
                 "13",
                 //Price 14
@@ -228,9 +249,9 @@ public class PackagesCreater {
                 //Longitude 10
                 "-89.771905",
                 //Longitude 11
-                "",
+                "10.992794",
                 //Longitude 12
-                "2424",
+                "36.395113",
                 //Longitude 13
                 "646",
                 //Longitude 14
@@ -267,9 +288,9 @@ public class PackagesCreater {
                 //Latitude 10
                 "43.569993",
                 //Latitude 11
-                "31.2304",
+                "-63.930741",
                 //Latitude 12
-                "554",
+                "25.464917",
                 //Latitude 13
                 "323",
                 //Latitude 14
@@ -287,7 +308,7 @@ public class PackagesCreater {
                 //Latitude 20
                 ""};
         //array of images id for each object
-        int[] imagesIds = {R.drawable.Trip1_pic1, R.drawable.Trip1_pic2, R.drawable.Trip1_pic3, R.drawable.Trip1_pic4, R.drawable.Trip1_pic5};
+        int[] imagesIds = {R.drawable.trip1_pic1, R.drawable.trip1_pic2, R.drawable.trip1_pic3, R.drawable.trip1_pic4, R.drawable.trip1_pic5};
         int[] imagesIds2 = {R.drawable.ic_menu_camera, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
         int[] imagesIds3 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
         int[] imagesIds4 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
@@ -296,9 +317,9 @@ public class PackagesCreater {
         int[] imagesIds7 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
         int[] imagesIds8 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
         int[] imagesIds9 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
-        int[] imagesIds10 = {R.drawable.Trip2_pic1, R.drawable.Trip2_pic2, R.drawable.Trip2_pic3, R.drawable.Trip2_pic4, R.drawable.Trip1_pic5};
-        int[] imagesIds11 = {};
-        int[] imagesIds12 = {};
+        int[] imagesIds10 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip1_pic5};
+        int[] imagesIds11 = {R.drawable.trip11_pic1, R.drawable.trip11_pic2, R.drawable.trip11_pic3, R.drawable.trip11_pic4, R.drawable.trip11_pic5};
+        int[] imagesIds12 = {R.drawable.trip12_pic1, R.drawable.trip12_pic2, R.drawable.trip12_pic3, R.drawable.trip12_pic4, R.drawable.trip12_pic5};
         int[] imagesIds13 = {};
         int[] imagesIds14 = {};
         int[] imagesIds15 = {};
