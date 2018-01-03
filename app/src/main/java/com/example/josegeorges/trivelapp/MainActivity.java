@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity
             transaction.commit();
         } else if (id == R.id.nav_credits) {
             new LibsBuilder()
-                    .withLibraries("floatingactionbutton", "circleimageview", "showcaseview", "android_job")
+                    .withLibraries("floatingactionbutton", "circleimageview", "pageindicatorview", "logolicense")
                     .withAutoDetect(false)
                     .withLicenseShown(true)
                     .withVersionShown(true)
