@@ -287,7 +287,7 @@ public class PackagesCreater {
                 //Latitude 20
                 ""};
         //array of images id for each object
-        int[] imagesIds = {R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable.pic4, R.drawable.pic5};
+        int[] imagesIds = {R.drawable.Trip1_pic1, R.drawable.Trip1_pic2, R.drawable.Trip1_pic3, R.drawable.Trip1_pic4, R.drawable.Trip1_pic5};
         int[] imagesIds2 = {R.drawable.ic_menu_camera, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
         int[] imagesIds3 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
         int[] imagesIds4 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
@@ -296,7 +296,7 @@ public class PackagesCreater {
         int[] imagesIds7 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
         int[] imagesIds8 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
         int[] imagesIds9 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
-        int[] imagesIds10 = {R.drawable.ic_star_black_24dp, R.drawable.ic_check_circle_black_24dp, R.drawable.ic_group_black_24dp};
+        int[] imagesIds10 = {R.drawable.Trip2_pic1, R.drawable.Trip2_pic2, R.drawable.Trip2_pic3, R.drawable.Trip2_pic4, R.drawable.Trip1_pic5};
         int[] imagesIds11 = {};
         int[] imagesIds12 = {};
         int[] imagesIds13 = {};
