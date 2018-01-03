@@ -21,7 +21,7 @@ public class PackagesCreater {
         //title for each object
         String[] titles = {"Lossy Villa", "Puerto Viana Resort", "Now Dominicano Resort",
                 "Blue Sway Resort", "Water Bay Resort", "Free Wind Water", "Glitter Canyon Resort",
-                "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion"};
+                "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown"};
         //description for each object
         String[] descriptions = {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
                 "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown " +
@@ -63,7 +63,10 @@ public class PackagesCreater {
                         "Start your day with a beautiful blue ocean view, and stay all day enjoying of massages, " +
                         "beautiful pools and the nice sound of silence.",
                 //Description 13
-                "description13",
+                "Looking to spend the night on a quick business trip? or maybe pass the night with your partner " +
+                        "while visiting London? Then this package is for you! Stay the night at Royal Crown, one " +
+                        "of the most luxury hotels in London to stay, with first class restaurants, to indoor pool" +
+                        " and indoor gym.",
                 //Description 14
                 "description14",
                 //Description 15
@@ -116,7 +119,11 @@ public class PackagesCreater {
                 "\u2022 Scuba diving classes\n" +
                 "\u2022 Hiking Excursion\n" +
                 "\u2022 Cooking class and wine testing\n"};
-        String[] activities13 = {"3"};
+        String[] activities13 = {"\u2022 Gym classes scheduled.\n" +
+                "\u2022 Personal Massages.\n" +
+                "\u2022 Live bands inside the hotel bar.\n" +
+                "\u2022 Excursion to get to know London for one day in a bus.\n" +
+                "\u2022 Room service.\n"};
         String[] activities14 = {"3"};
         String[] activities15 = {"3"};
         String[] activities16 = {"3"};
@@ -173,7 +180,7 @@ public class PackagesCreater {
                 //Duration 12
                 "3 nights and 4 days.",
                 //Duration 13
-                "13",
+                "1 night and 2 days.",
                 //Duration 14
                 "14",
                 //Duration 15
@@ -213,7 +220,7 @@ public class PackagesCreater {
                 //Price 12
                 "$2390",
                 //Price 13
-                "13",
+                "$999",
                 //Price 14
                 "14",
                 //Price 15
@@ -253,7 +260,7 @@ public class PackagesCreater {
                 //Longitude 12
                 "36.395113",
                 //Longitude 13
-                "646",
+                "51.518482",
                 //Longitude 14
                 "",
                 //Longitude 15
@@ -292,7 +299,7 @@ public class PackagesCreater {
                 //Latitude 12
                 "25.464917",
                 //Latitude 13
-                "323",
+                "-0.105745",
                 //Latitude 14
                 "",
                 //Latitude 15
@@ -320,7 +327,7 @@ public class PackagesCreater {
         int[] imagesIds10 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip1_pic5};
         int[] imagesIds11 = {R.drawable.trip11_pic1, R.drawable.trip11_pic2, R.drawable.trip11_pic3, R.drawable.trip11_pic4, R.drawable.trip11_pic5};
         int[] imagesIds12 = {R.drawable.trip12_pic1, R.drawable.trip12_pic2, R.drawable.trip12_pic3, R.drawable.trip12_pic4, R.drawable.trip12_pic5};
-        int[] imagesIds13 = {};
+        int[] imagesIds13 = {R.drawable.trip13_pic1, R.drawable.trip13_pic2, R.drawable.trip13_pic3, R.drawable.trip13_pic4, R.drawable.trip13_pic5};
         int[] imagesIds14 = {};
         int[] imagesIds15 = {};
         int[] imagesIds16 = {};
