@@ -40,11 +40,17 @@ public class PackagesCreater {
                 "Come experience this breathtaking water themed all inclusive resort. Visit our water park or one of our 4 pools. There are so many" +
                         " family friendly options as well as the multiple bars located by the pools for all the adults to enjoy.",
                 //Description 6
-                "description6",
+                "Enjoy an all nature resort that filters all their water and uses wind to generate power. " +
+                        "Discover the untold beauty presented when staying here. Once you experience it you will" +
+                        " never want to leave.",
                 //Description 7
-                "description7",
+                "This is the perfect destination for women. Glitter Canyon Resort is an all inclusive spa." +
+                        " There is something for everyone here. We have different packages for everyone. This os the perfect" +
+                        " honeymoon destination or just to get away from the kids.",
                 //Description 8
-                "description8",
+                "Come fall in love with our all inclusive beach resort. Grab a drink from one of our 5 bars," +
+                        " bring it to the beach and sit in one of our many luxury beach recliners. " +
+                        "Spend the day lounging on the beach, enjoying drinks and enjoying the beautiful sunset over the water",
                 //Description 9
                 "description9",
                 //Description 10
@@ -121,9 +127,20 @@ public class PackagesCreater {
                 "\u2022 Outdoor movie\n" +
                 "\u2022 Rent a classic car\n" +
                 "\u2022 Swim with the dolphins\n"};
-        String[] activities6 = {"3"};
-        String[] activities7 = {"3"};
-        String[] activities8 = {"3"};
+        String[] activities6 = {"\u2022 Helicopter Tour\n" +
+                "\u2022 Day at the amusement park\n" +
+                "\u2022 Music festival\n" +
+                "\u2022 MAD National Park\n"};
+        String[] activities7 = {"\u2022 Visit a casino\n" +
+                "\u2022 Watch a show\n" +
+                "\u2022 Tour the city\n" +
+                "\u2022 Visit the Canyon\n" +
+                "\u2022 Go to a drive-in\n"};
+        String[] activities8 = {"\u2022 Swimming in the ocean\n" +
+                "\u2022 Tour the town\n" +
+                "\u2022 Shop in markets\n" +
+                "\u2022 Snorkeling\n" +
+                "\u2022 Boat Tour\n"};
         String[] activities9 = {"3"};
         String[] activities10 = {"\u2022 Ride rides\n" +
                 "\u2022 Huge Water Park\n" +
@@ -291,9 +308,9 @@ public class PackagesCreater {
                 //Longitude 6
                 "-80.196226",
                 //Longitude 7
-                "7",
+                "-115.174484",
                 //Longitude 8
-                "8",
+                "-77.928686",
                 //Longitude 9
                 "9",
                 //Longitude 10
@@ -330,9 +347,9 @@ public class PackagesCreater {
                 //Latitude 6
                 "25.753462",
                 //Latitude 7
-                "7",
+                "36.118485",
                 //Latitude 8
-                "8",
+                "24.895402",
                 //Latitude 9
                 "9",
                 //Latitude 10
