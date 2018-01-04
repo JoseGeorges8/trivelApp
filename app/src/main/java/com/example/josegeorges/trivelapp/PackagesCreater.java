@@ -380,8 +380,8 @@ public class PackagesCreater {
         int[] imagesIds3 = {R.drawable.trip3_pic1, R.drawable.trip3_pic2, R.drawable.trip3_pic3, R.drawable.trip3_pic4, R.drawable.trip3_pic5};
         int[] imagesIds4 = {R.drawable.trip4_pic1, R.drawable.trip4_pic2, R.drawable.trip4_pic3, R.drawable.trip4_pic4, R.drawable.trip4_pic5};
         int[] imagesIds5 = {R.drawable.trip5_pic1, R.drawable.trip5_pic2, R.drawable.trip5_pic3, R.drawable.trip5_pic4, R.drawable.trip5_pic5};
-        int[] imagesIds6 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
-        int[] imagesIds7 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
+        int[] imagesIds6 = {R.drawable.trip6_pic1, R.drawable.trip6_pic2, R.drawable.trip6_pic3, R.drawable.trip6_pic4, R.drawable.trip6_pic5};
+        int[] imagesIds7 = {R.drawable.trip7_pic1, R.drawable.trip7_pic2, R.drawable.trip7_pic3, R.drawable.trip7_pic4, R.drawable.trip7_pic5};
         int[] imagesIds8 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
         int[] imagesIds9 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
         int[] imagesIds10 = {R.drawable.trip10_pic1, R.drawable.trip10_pic2, R.drawable.trip10_pic3, R.drawable.trip10_pic4, R.drawable.trip1_pic5};
