@@ -21,7 +21,7 @@ public class PackagesCreater {
         //title for each object
         String[] titles = {"Lossy Villa", "Puerto Viana Resort", "Now Dominicano Resort",
                 "Blue Sway Resort", "Water Bay Resort", "Free Wind Water", "Glitter Canyon Resort",
-                "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown", "Vida Rica"};
+                "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown", "Vida Rica", "Caribbean Cruise"};
         //description for each object
         String[] descriptions = {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
                 "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown " +
@@ -74,7 +74,15 @@ public class PackagesCreater {
                         " activities like pool recreation and many activities more! Don/’t forget to do some scuba " +
                         "diving on the cleanest beaches and ride water motorcycles!",
                 //Description 15
-                "description15",
+                "Travel through the Caribbean on one of the biggest cruise in the world. " +
+                        "With more than 1,000 foot long, the Caribbean Cruise carries up to 5,000 guests! " +
+                        "It has all the activities your family will love to enjoy. From water slides, to" +
+                        " relaxing pools, the Caribbean Cruise has everything you need to spend one of the " +
+                        "best summer travels of your life! Also, if you are tired of spending the time outside " +
+                        "on the sun, the Cruise has many floors with different activities each. From Casinos, to " +
+                        "fancy restaurants and a theatre, Caribbean Cruise will not bored you or your family! The " +
+                        "Cruise Caribbean sails from Miami, Florida and passes through the Caribbean islands, making" +
+                        " stops in Puerto Rico, Dominican Republic and Cuba!",
                 //Description 16
                 "description16",
                 //Description 17
@@ -136,7 +144,16 @@ public class PackagesCreater {
                 "\u2022 Free access to the hotel’s gym\n"+
                 "\u2022 Scuba diving lessons\n"+
                 "\u2022 Gaming room for kids\n"};
-        String[] activities15 = {"3"};
+        String[] activities15 = {"\u2022 Water Rides\n" +
+                "\u2022 Theater\n" +
+                "\u2022 Stores to shop\n" +
+                "\u2022 Restaurants with different types of food\n" +
+                "\u2022 3 stops in Puerto Rico, Dominican Republic and Cuba.\n" +
+                "\u2022 Gym (may charge for usage)\n"+
+                "\u2022 Night Club with different theme nights\n"+
+                "\u2022 Karaoke Bar\n"+
+                "\u2022 Casino.\n"+
+                "\u2022 Pool Activities\n"};
         String[] activities16 = {"3"};
         String[] activities17 = {"3"};
         String[] activities18 = {"3"};
@@ -195,7 +212,7 @@ public class PackagesCreater {
                 //Duration 14
                 "5 nights and 6 days.",
                 //Duration 15
-                "15",
+                "3 nights and 4 days.",
                 //Duration 16
                 "16",
                 //Duration 17
@@ -235,7 +252,7 @@ public class PackagesCreater {
                 //Price 14
                 "$3457",
                 //Price 15
-                "15",
+                "$1765",
                 //Price 16
                 "16",
                 //Price 17
@@ -275,7 +292,7 @@ public class PackagesCreater {
                 //Longitude 14
                 "19.083127",
                 //Longitude 15
-                "",
+                "25.899108",
                 //Longitude 16
                 "",
                 //Longitude 17
@@ -314,7 +331,7 @@ public class PackagesCreater {
                 //Latitude 14
                 "-87.553813",
                 //Latitude 15
-                "",
+                "-80.123943",
                 //Latitude 16
                 "",
                 //Latitude 17
@@ -340,7 +357,7 @@ public class PackagesCreater {
         int[] imagesIds12 = {R.drawable.trip12_pic1, R.drawable.trip12_pic2, R.drawable.trip12_pic3, R.drawable.trip12_pic4, R.drawable.trip12_pic5};
         int[] imagesIds13 = {R.drawable.trip13_pic1, R.drawable.trip13_pic2, R.drawable.trip13_pic3, R.drawable.trip13_pic4, R.drawable.trip13_pic5};
         int[] imagesIds14 = {R.drawable.trip14_pic1, R.drawable.trip14_pic2, R.drawable.trip14_pic3, R.drawable.trip14_pic4, R.drawable.trip14_pic5};
-        int[] imagesIds15 = {};
+        int[] imagesIds15 = {R.drawable.trip15_pic1, R.drawable.trip15_pic2, R.drawable.trip15_pic3, R.drawable.trip15_pic4, R.drawable.trip15_pic5};
         int[] imagesIds16 = {};
         int[] imagesIds17 = {};
         int[] imagesIds18 = {};
