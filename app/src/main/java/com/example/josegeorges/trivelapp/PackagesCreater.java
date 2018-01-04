@@ -23,12 +23,13 @@ public class PackagesCreater {
                 "Blue Sway Resort", "Water Bay Resort", "Free Wind Water", "Glitter Canyon Resort",
                 "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown", "Vida Rica", "Caribbean Cruise"};
         //description for each object
-        String[] descriptions = {"Lossy Villa is a amazing luxury resort located on the coast of Mexico." +
-                "The resort has over 8 restaurants and 2 arcades. Every room has a view to remember and gold trim." +
-                "Relax on the beach or by one of the 3 pools as well as enjoying all the unlimited alcoholic and non-alcoholic drinks you can order." +
-                "This resort has all the emanates and space for you to kick back relax and enjoy your vacation",
+        String[] descriptions = {"Lossy Villa is a beautiful all inclusive resort. While here take the chance to visit" +
+                "one of our 4 bars. As well as try one of the 3 on site pools. Swim up to the bar and watch the sunset over the" +
+                " ocean, while enjoying a cold drink from one of our swim up bars",
                 //Description 2
-                "description2",
+                "Come visit this beautiful tropical resort. It is the perfect honeymoon or family location with its magnificent pools" +
+                        " and views. Visit many of the children play areas as well as the bars for the adults. There Puerto Viana" +
+                        " Resort",
                 //Description 3
                 "description3",
                 //Description 4
@@ -92,15 +93,16 @@ public class PackagesCreater {
                 //Description 20
                 "description20"};
         //activities for each object
-        String[] activities = {"\u2022 See a movie at the drive-in.\n" +
-                "\u2022 Walk on the boardwalk and listen to the boards creak under your feet.\n" +
-                "\u2022 Blow bubbles.\n" +
-                "\u2022 Play tag, hopscotch, or one of your favorite childhood games.\n" +
-                "\u2022 Ride a roller coaster.\n" +
-                "\u2022 Play miniature golf.\n" +
-                "\u2022 Win a prize at the fair.\n" +
-                "\u2022 Catch fireflies at night."};
-        String[] activities2 = {"2"};
+        String[] activities = {"\u2022 Snorkeling\n" +
+                "\u2022 Tour ancient ruins\n" +
+                "\u2022 Visit amazing Dinosaur Park\n" +
+                "\u2022 Visit ancient pyramids\n" +
+                "\u2022 Take a tour of the town and visit local shops\n"};
+        String[] activities2 = {"\u2022 Bar hopping by the beach\n" +
+                "\u2022 Historical tour of the city\n" +
+                "\u2022 Bird Watching\n" +
+                "\u2022 Romantic boat tour\n" +
+                "\u2022 Local experience\n"};
         String[] activities3 = {"3"};
         String[] activities4 = {"3"};
         String[] activities5 = {"3"};
@@ -182,9 +184,9 @@ public class PackagesCreater {
         arrayListActivities.add(activities20);
 
         //duration for each object
-        String[] duration = {"4 nights and 5 Days",
+        String[] duration = {"4 Nights and 5 Days",
                 //Duration 2
-                "duration2",
+                "3 Nights and 4 Days",
                 //Duration 3
                 "duration3",
                 //Duration 4
@@ -200,17 +202,17 @@ public class PackagesCreater {
                 //Duration 9
                 "9",
                 //Duration 10
-                "2 nights and 3 Days",
+                "2 Nights and 3 Days",
                 //Duration 11
-                "5 nights and 6 days.",
+                "5 Nights and 6 Days.",
                 //Duration 12
-                "3 nights and 4 days.",
+                "3 Nights and 4 Days.",
                 //Duration 13
-                "1 night and 2 days.",
+                "1 Night and 2 Days.",
                 //Duration 14
-                "5 nights and 6 days.",
+                "5 Nights and 6 Days.",
                 //Duration 15
-                "3 nights and 4 days.",
+                "3 Nights and 4 Days.",
                 //Duration 16
                 "16",
                 //Duration 17
@@ -224,7 +226,7 @@ public class PackagesCreater {
         //prices for each object
         String[] prices = {"$5000",
                 //Price 2
-                "price2",
+                "$3299",
                 //Price 3
                 "price3",
                 //Price 4
@@ -262,9 +264,9 @@ public class PackagesCreater {
                 //Price 20
                 "20"};
         //location for each object
-        String[] longitude = {"121.4737",
+        String[] longitude = {"-106.402266",
                 //Longitude 2
-                "2424",
+                "-67.156323",
                 //Longitude 3
                 "646",
                 //Longitude 4
@@ -301,9 +303,9 @@ public class PackagesCreater {
                 "",
                 //Longitude 20
                 ""};
-        String[] latitute = {"31.2304",
+        String[] latitute = {"23.186051",
                 //Latitude 2
-                "554",
+                "18.437631",
                 //Latitude 3
                 "323",
                 //Latitude 4
