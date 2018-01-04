@@ -203,19 +203,19 @@ public class PackagesCreater {
                 //Duration 2
                 "3 Nights and 4 Days",
                 //Duration 3
-                "duration3",
+                "4 Nights and 5 Days",
                 //Duration 4
-                "4",
+                "2 Nights and 3 Days",
                 //Duration 5
-                "5",
+                "3 Nights and 4 Days",
                 //Duration 6
-                "6",
+                "4 Nights and 5 Days",
                 //Duration 7
-                "7",
+                "6 Nights and 7 Days",
                 //Duration 8
-                "8",
+                "5 Nights and 6 Days",
                 //Duration 9
-                "9",
+                "4 Nights and 5 Days",
                 //Duration 10
                 "2 Nights and 3 Days",
                 //Duration 11
@@ -243,19 +243,19 @@ public class PackagesCreater {
                 //Price 2
                 "$3299",
                 //Price 3
-                "price3",
+                "$4500",
                 //Price 4
-                "4",
+                "$2000",
                 //Price 5
-                "5",
+                "$3599",
                 //Price 6
-                "6",
+                "$4200",
                 //Price 7
-                "6",
+                "$7899",
                 //Price 8
-                "8",
+                "$4699",
                 //Price 9
-                "9",
+                "$2599",
                 //Price 10
                 "$2616",
                 //Price 11
@@ -283,13 +283,13 @@ public class PackagesCreater {
                 //Longitude 2
                 "-67.156323",
                 //Longitude 3
-                "646",
+                "-68.412316",
                 //Longitude 4
-                "4",
+                "-81.925049",
                 //Longitude 5
-                "5",
+                "-90.062742",
                 //Longitude 6
-                "6",
+                "-80.196226",
                 //Longitude 7
                 "7",
                 //Longitude 8
@@ -322,13 +322,13 @@ public class PackagesCreater {
                 //Latitude 2
                 "18.437631",
                 //Latitude 3
-                "323",
+                "18.680727",
                 //Latitude 4
-                "4",
+                "26.422927",
                 //Latitude 5
-                "5",
+                "29.948396",
                 //Latitude 6
-                "6",
+                "25.753462",
                 //Latitude 7
                 "7",
                 //Latitude 8
