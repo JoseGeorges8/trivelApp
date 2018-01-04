@@ -31,11 +31,14 @@ public class PackagesCreater {
                         " and views. Visit many of the children play areas as well as the bars for the adults. There Puerto Viana" +
                         " Resort",
                 //Description 3
-                "description3",
+                "Amazing tropical destination perfect for your next vacation. Every room has a perfect view of the ocean or the forest," +
+                        "no matter what you cant go wrong. Just sit back and relax while we take care of everything with our all inclusive deals.",
                 //Description 4
-                "description4",
+                "Stay in this beautiful resort full of rich history. Experience the historic area, top it off by staying in an old plantation" +
+                        " which has been transformed into our rustic resort. Experience all the land has to offer as well as the other attractions.",
                 //Description 5
-                "description5",
+                "Come experience this breathtaking water themed all inclusive resort. Visit our water park or one of our 4 pools. There are so many" +
+                        " family friendly options as well as the multiple bars located by the pools for all the adults to enjoy.",
                 //Description 6
                 "description6",
                 //Description 7
@@ -103,9 +106,21 @@ public class PackagesCreater {
                 "\u2022 Bird Watching\n" +
                 "\u2022 Romantic boat tour\n" +
                 "\u2022 Local experience\n"};
-        String[] activities3 = {"3"};
-        String[] activities4 = {"3"};
-        String[] activities5 = {"3"};
+        String[] activities3 = {"\u2022 Visit locals on a city tour\n" +
+                "\u2022 Catamaran boat tours\n" +
+                "\u2022 Visit the aquarium\n" +
+                "\u2022 Visit ancient ruins\n" +
+                "\u2022 Nightclubbing\n"};
+        String[] activities4 = {"\u2022 Plantation Tour\n" +
+                "\u2022 Party on Alcohol St.\n" +
+                "\u2022 Steam boat ride\n" +
+                "\u2022 Segway Tour\n" +
+                "\u2022 Old City Tour\n"};
+        String[] activities5 = {"\u2022 Water Park\n" +
+                "\u2022 Beach Tours\n" +
+                "\u2022 Outdoor movie\n" +
+                "\u2022 Rent a classic car\n" +
+                "\u2022 Swim with the dolphins\n"};
         String[] activities6 = {"3"};
         String[] activities7 = {"3"};
         String[] activities8 = {"3"};
@@ -346,8 +361,8 @@ public class PackagesCreater {
         int[] imagesIds = {R.drawable.trip1_pic1, R.drawable.trip1_pic2, R.drawable.trip1_pic3, R.drawable.trip1_pic4, R.drawable.trip1_pic5};
         int[] imagesIds2 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
         int[] imagesIds3 = {R.drawable.trip3_pic1, R.drawable.trip3_pic2, R.drawable.trip3_pic3, R.drawable.trip3_pic4, R.drawable.trip3_pic5};
-        int[] imagesIds4 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
-        int[] imagesIds5 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
+        int[] imagesIds4 = {R.drawable.trip4_pic1, R.drawable.trip4_pic2, R.drawable.trip4_pic3, R.drawable.trip4_pic4, R.drawable.trip4_pic5};
+        int[] imagesIds5 = {R.drawable.trip5_pic1, R.drawable.trip5_pic2, R.drawable.trip5_pic3, R.drawable.trip5_pic4, R.drawable.trip5_pic5};
         int[] imagesIds6 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
         int[] imagesIds7 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
         int[] imagesIds8 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
