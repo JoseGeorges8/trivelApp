@@ -182,7 +182,7 @@ public class PackagesCreater {
         arrayListActivities.add(activities20);
 
         //duration for each object
-        String[] duration = {"5 Days",
+        String[] duration = {"4 nights and 5 Days",
                 //Duration 2
                 "duration2",
                 //Duration 3
@@ -200,7 +200,7 @@ public class PackagesCreater {
                 //Duration 9
                 "9",
                 //Duration 10
-                "3 Days",
+                "2 nights and 3 Days",
                 //Duration 11
                 "5 nights and 6 days.",
                 //Duration 12
