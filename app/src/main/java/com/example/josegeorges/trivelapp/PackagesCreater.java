@@ -23,12 +23,10 @@ public class PackagesCreater {
                 "Blue Sway Resort", "Water Bay Resort", "Free Wind Water", "Glitter Canyon Resort",
                 "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown", "Vida Rica", "Caribbean Cruise"};
         //description for each object
-        String[] descriptions = {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown " +
-                "printer took a galley of type and scrambled it to make a type specimen book. It has survived not only " +
-                "five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was " +
-                "popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more " +
-                "recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        String[] descriptions = {"Lossy Villa is a amazing luxury resort located on the coast of Mexico." +
+                "The resort has over 8 restaurants and 2 arcades. Every room has a view to remember and gold trim." +
+                "Relax on the beach or by one of the 3 pools as well as enjoying all the unlimited alcoholic and non-alcoholic drinks you can order." +
+                "This resort has all the emanates and space for you to kick back relax and enjoy your vacation",
                 //Description 2
                 "description2",
                 //Description 3
