@@ -21,7 +21,8 @@ public class PackagesCreater {
         //title for each object
         String[] titles = {"Lossy Villa", "Puerto Viana Resort", "Now Dominicano Resort",
                 "Blue Sway Resort", "Water Bay Resort", "Free Wind Water", "Glitter Canyon Resort",
-                "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown", "Vida Rica", "Caribbean Cruise"};
+                "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown", "Vida Rica", "Caribbean Cruise", "Wonders"
+                , "Exotica", "Royal Palace"};
         //description for each object
         String[] descriptions = {"Lossy Villa is a beautiful all inclusive resort. While here take the chance to visit" +
                 "one of our 4 bars. As well as try one of the 3 on site pools. Swim up to the bar and watch the sunset over the" +
@@ -92,11 +93,20 @@ public class PackagesCreater {
                         "Cruise Caribbean sails from Miami, Florida and passes through the Caribbean islands, making" +
                         " stops in Puerto Rico, Dominican Republic and Cuba!",
                 //Description 16
-                "description16",
+                "Wonders is one of the most luxury hotels in the world. Located underwater, " +
+                        "Wonders offers their guests a stay they/’ll never forget. Eat and sleep while " +
+                        "watching the relaxing waves and creatures of the deep ocean. It is perfect for a " +
+                        "honey moon or just a simple trip with your partner!",
                 //Description 17
-                "description17",
+                "Spend your family vacations in this amazing island resort. Exotica holds up to 6,000" +
+                        " guests and its known for its unlimited activities. with our package, you get all" +
+                        " in food and drinks! Kids will love the kids area in this resort where they have all " +
+                        "the recreational activities you can imagine! ",
                 //Description 18
-                "description18",
+                "Amazing resort for business trips. This lovely resort in the Margarita Island, Venezuela," +
+                        " offers a golf court to spend some time on! you will also have 1st class rooms, amazing" +
+                        " massages, a beautiful beach and a luxury pool! this package is recommended for golf " +
+                        "lovers ",
                 //Description 19
                 "description19",
                 //Description 20
@@ -186,9 +196,26 @@ public class PackagesCreater {
                 "\u2022 Karaoke Bar\n"+
                 "\u2022 Casino.\n"+
                 "\u2022 Pool Activities\n"};
-        String[] activities16 = {"3"};
-        String[] activities17 = {"3"};
-        String[] activities18 = {"3"};
+        String[] activities16 = {"\u2022 Scuba diving lessons.\n" +
+                "\u2022 Room Service.\n" +
+                "\u2022 Restaurants.\n" +
+                "\u2022 Bars."};
+        String[] activities17 = {"\u2022 Scuba diving lessons\n" +
+                "\u2022 Water Motorcycle Renting\n" +
+                "\u2022 Restaurants all over the island\n" +
+                "\u2022 Bars all over the island\n" +
+                "\u2022 Night Shows\n" +
+                "\u2022 Food theme on each restaurant per day\n"+
+                "\u2022 Water rides\n"+
+                "\u2022 Bike renting\n"+
+                "\u2022 Casino.\n"+
+                "\u2022 Pool Activities\n"};
+        String[] activities18 = {"\u2022 Scuba diving lessons\n" +
+                "\u2022 Water Motorcycle Renting\n" +
+                "\u2022 Fancy Restaurants\n" +
+                "\u2022 Night Bar with Karaoke nights\n" +
+                "\u2022 Night Shows\n" +
+                "\u2022 Golf Court\n"};
         String[] activities19 = {"3"};
         String[] activities20 = {"3"};
 
@@ -246,11 +273,11 @@ public class PackagesCreater {
                 //Duration 15
                 "3 Nights and 4 Days.",
                 //Duration 16
-                "16",
+                "2 nights and 3 days.",
                 //Duration 17
-                "17",
+                "5 nights and 6 days.",
                 //Duration 18
-                "18",
+                "4 nights and 5 days.",
                 //Duration 19
                 "19",
                 //Duration 20
@@ -286,11 +313,11 @@ public class PackagesCreater {
                 //Price 15
                 "$1765",
                 //Price 16
-                "16",
+                "$5890",
                 //Price 17
-                "17",
+                "$3464",
                 //Price 18
-                "18",
+                "$4897",
                 //Price 19
                 "19",
                 //Price 20
@@ -326,11 +353,11 @@ public class PackagesCreater {
                 //Longitude 15
                 "25.899108",
                 //Longitude 16
-                "",
+                "1.259133",
                 //Longitude 17
-                "",
+                "19.724641",
                 //Longitude 18
-                "",
+                "11.129415",
                 //Longitude 19
                 "",
                 //Longitude 20
@@ -365,11 +392,11 @@ public class PackagesCreater {
                 //Latitude 15
                 "-80.123943",
                 //Latitude 16
-                "",
+                "103.811248",
                 //Latitude 17
-                "",
+                "-79.795893",
                 //Latitude 18
-                "",
+                "-63.918236",
                 //Latitude 19
                 "",
                 //Latitude 20
@@ -390,9 +417,9 @@ public class PackagesCreater {
         int[] imagesIds13 = {R.drawable.trip13_pic1, R.drawable.trip13_pic2, R.drawable.trip13_pic3, R.drawable.trip13_pic4, R.drawable.trip13_pic5};
         int[] imagesIds14 = {R.drawable.trip14_pic1, R.drawable.trip14_pic2, R.drawable.trip14_pic3, R.drawable.trip14_pic4, R.drawable.trip14_pic5};
         int[] imagesIds15 = {R.drawable.trip15_pic1, R.drawable.trip15_pic2, R.drawable.trip15_pic3, R.drawable.trip15_pic4, R.drawable.trip15_pic5};
-        int[] imagesIds16 = {};
-        int[] imagesIds17 = {};
-        int[] imagesIds18 = {};
+        int[] imagesIds16 = {R.drawable.trip16_pic1, R.drawable.trip16_pic2, R.drawable.trip16_pic3, R.drawable.trip16_pic4, R.drawable.trip16_pic5};
+        int[] imagesIds17 = {R.drawable.trip17_pic1, R.drawable.trip17_pic2, R.drawable.trip17_pic3, R.drawable.trip17_pic4, R.drawable.trip17_pic5};
+        int[] imagesIds18 = {R.drawable.trip18_pic1, R.drawable.trip18_pic2, R.drawable.trip18_pic3, R.drawable.trip18_pic4, R.drawable.trip18_pic5};
         int[] imagesIds19 = {};
         int[] imagesIds20 = {};
 
