@@ -22,7 +22,7 @@ public class PackagesCreater {
         String[] titles = {"Lossy Villa", "Puerto Viana Resort", "Now Dominicano Resort",
                 "Blue Sway Resort", "Water Bay Resort", "Free Wind Water", "Glitter Canyon Resort",
                 "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown", "Vida Rica", "Caribbean Cruise", "Wonders"
-                , "Exotica", "Royal Palace"};
+                , "Exotica", "Royal Palace", "Jungle Wild", "The Class"};
         //description for each object
         String[] descriptions = {"Lossy Villa is a beautiful all inclusive resort. While here take the chance to visit" +
                 "one of our 4 bars. As well as try one of the 3 on site pools. Swim up to the bar and watch the sunset over the" +
@@ -108,9 +108,14 @@ public class PackagesCreater {
                         " massages, a beautiful beach and a luxury pool! this package is recommended for golf " +
                         "lovers ",
                 //Description 19
-                "description19",
+                "Feeling like going for an adventure? Then this exiting jungle resort is for you! explore" +
+                        " the jungles of Thailand and relax at the same time in Jungle Wild, you will be able " +
+                        "to travel through the jungle the day, and then get some relaxing drinks at night\n",
                 //Description 20
-                "description20"};
+                "The ultimate luxury type of life. The Class offers a 5 stars service with" +
+                        " its splendour and magnificence. Spend the best sleep on the best quality rooms." +
+                        " swim and relax on either indoor or outdoor pools. Also, eat the most classy food in" +
+                        " the world in their 1st class restaurant.\n"};
         //activities for each object
         String[] activities = {"\u2022 Snorkeling\n" +
                 "\u2022 Tour ancient ruins\n" +
@@ -216,8 +221,16 @@ public class PackagesCreater {
                 "\u2022 Night Bar with Karaoke nights\n" +
                 "\u2022 Night Shows\n" +
                 "\u2022 Golf Court\n"};
-        String[] activities19 = {"3"};
-        String[] activities20 = {"3"};
+        String[] activities19 = {"\u2022 Excursions through Jungle\n" +
+                "\u2022 Spa\n" +
+                "\u2022 Sauna\n" +
+                "\u2022 Massages\n"};
+        String[] activities20 = {"\u2022 Room Service\n" +
+                "\u2022 Spa\n" +
+                "\u2022 Sauna\n" +
+                "\u2022 Massages\n"+
+                "\u2022 Casino\n"+
+                "\u2022 Live Band on Fridays inside the Restaurant\n"};
 
 
         ArrayList<String[]> arrayListActivities = new ArrayList<>();
@@ -279,9 +292,9 @@ public class PackagesCreater {
                 //Duration 18
                 "4 nights and 5 days.",
                 //Duration 19
-                "19",
+                "4 nights and 5 days.",
                 //Duration 20
-                "20"};
+                "2 nights and 3 days."};
         //prices for each object
         String[] prices = {"$5000",
                 //Price 2
@@ -319,9 +332,9 @@ public class PackagesCreater {
                 //Price 18
                 "$4897",
                 //Price 19
-                "19",
+                "$3878",
                 //Price 20
-                "20"};
+                "$7897"};
         //location for each object
         String[] longitude = {"-106.402266",
                 //Longitude 2
@@ -359,9 +372,9 @@ public class PackagesCreater {
                 //Longitude 18
                 "11.129415",
                 //Longitude 19
-                "",
+                "17.901814",
                 //Longitude 20
-                ""};
+                "25.789909"};
         String[] latitute = {"23.186051",
                 //Latitude 2
                 "18.437631",
@@ -398,9 +411,9 @@ public class PackagesCreater {
                 //Latitude 18
                 "-63.918236",
                 //Latitude 19
-                "",
+                "100.667700",
                 //Latitude 20
-                ""};
+                "-80.199873"};
         //array of images id for each object
         int[] imagesIds = {R.drawable.trip1_pic1, R.drawable.trip1_pic2, R.drawable.trip1_pic3, R.drawable.trip1_pic4, R.drawable.trip1_pic5};
         int[] imagesIds2 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
@@ -420,8 +433,8 @@ public class PackagesCreater {
         int[] imagesIds16 = {R.drawable.trip16_pic1, R.drawable.trip16_pic2, R.drawable.trip16_pic3, R.drawable.trip16_pic4, R.drawable.trip16_pic5};
         int[] imagesIds17 = {R.drawable.trip17_pic1, R.drawable.trip17_pic2, R.drawable.trip17_pic3, R.drawable.trip17_pic4, R.drawable.trip17_pic5};
         int[] imagesIds18 = {R.drawable.trip18_pic1, R.drawable.trip18_pic2, R.drawable.trip18_pic3, R.drawable.trip18_pic4, R.drawable.trip18_pic5};
-        int[] imagesIds19 = {};
-        int[] imagesIds20 = {};
+        int[] imagesIds19 = {R.drawable.trip19_pic1, R.drawable.trip19_pic2, R.drawable.trip19_pic3, R.drawable.trip19_pic4, R.drawable.trip19_pic5};
+        int[] imagesIds20 = {R.drawable.trip20_pic1, R.drawable.trip20_pic2, R.drawable.trip20_pic3, R.drawable.trip20_pic4, R.drawable.trip20_pic5 };
 
 
 
