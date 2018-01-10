@@ -84,6 +84,19 @@ public class SalesRepAdapter extends RecyclerView.Adapter<SalesRepViewHolder> {
             }
         });
 
+        holder.getSalesRep_social().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("INTENTS", "Social " + list.get(position).getSocial());
+                String[] socialLink = {list.get(position).getSocial()};
+                Intent intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.facebook.com/Trivel-341889966290364/"));
+                if(intent.resolveActivity(activity.getPackageManager()) != null){
+                    activity.startActivity(intent);
+                }
+            }
+        });
+
     }
 
     @Override

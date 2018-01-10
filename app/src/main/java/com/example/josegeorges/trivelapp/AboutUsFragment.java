@@ -86,9 +86,10 @@ public class AboutUsFragment extends Fragment {
         String[] names = {"Jose Georges", "Nick Stajduhar"};
         String[] emails = {"josegeorges@trivelagency.com", "nickstajduhar@trivelagency.com"};
         String[] phones = {"8888888888", "222222222"};
+        String[] social = {"https://www.facebook.com/Trivel-341889966290364/", "https://www.facebook.com/Trivel-341889966290364/"};
         int[] imagesID = {R.drawable.jose, R.drawable.nick};
         for(int i = 0; i < names.length; i++){
-            SalesRep salesRep = new SalesRep(names[i], emails[i], phones[i], imagesID[i]);
+            SalesRep salesRep = new SalesRep(names[i], emails[i], phones[i], social[i], imagesID[i]);
             salesReps.add(salesRep);
         }
     }
