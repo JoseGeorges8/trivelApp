@@ -16,16 +16,19 @@
         android:id="@+id/package_icon" />
 
     <TextView
+        android:fontFamily="@font/roboto_regular"
         android:id="@+id/package_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/package_icon"
         android:layout_toEndOf="@+id/package_icon"
         android:layout_toRightOf="@+id/package_icon"
         android:text="@string/our_packages"
-        android:textSize="@dimen/title_size"/>
+        android:textSize="@dimen/title_size" />
 
     <TextView
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/roboto_regular"
         android:id="@+id/package_price"
         android:layout_marginRight="@dimen/icon_margin"
         android:layout_width="wrap_content"

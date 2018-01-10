@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
+
 
 /**
  * This Fragment is used to show the images inside the ViewPager from TripViewFragment
@@ -60,8 +62,9 @@ public class TripImageFragment extends Fragment {
 
         //simply set the image to the received image
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
-        imageView.setImageResource(image);
-
+        Picasso.with(getContext()).load(image).into(imageView);
+        //imageView.setImageResource(image);
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 
         return view;
     }

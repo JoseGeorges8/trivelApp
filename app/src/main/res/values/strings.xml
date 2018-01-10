@@ -21,15 +21,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--About us Section-->
-    <string name="aboutus_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Vestibulum ligula est, malesuada in vehicula id, mattis viverra elit. Sed sodales commodo diam et maximus.
-        Nullam dui lorem, faucibus non cursus sit amet, vehicula et justo. Donec rhoncus lectus odio,
-        mattis convallis enim interdum et. Aliquam pulvinar dolor a sapien porta, vitae consequat mauris feugiat.
-        Nunc varius, diam id maximus elementum, augue sapien lacinia urna, at viverra sapien lorem id augue.
-        Suspendisse et auctor nisl. Nunc facilisis convallis libero, a molestie risus commodo sit amet.
-        Aenean consectetur magna nec lectus tempor, ac commodo tortor tempor. Aliquam cursus nec elit eget volutpat.
-        Vestibulum eu ultrices velit, mattis fringilla justo.</string>
+    <string name="aboutus_description">Trivel was formed by Jose Georges and Nick Stajduhar. Both 2nd Year Mobile App Development Students
+    The idea of Trivel was to make a travel agency app that would be easy to use and make it graphically appealing at the same time.
+    Trivel blew up fast and turned into an amazing company to create offering trips to all families and couples at the touch of a finger.</string>
     <string name="title_activity_main2">Main2Activity</string>
 
+
+    <string name="aboutLibraries_description_showIcon">true</string>
+    <string name="aboutLibraries_description_showVersion">true</string>
+    <string name="aboutLibraries_description_text">Trivel is a travel agency app made by Jose Georges and Nick Stajduhar. 2nd Year Mobile App Development Students</string>
 
 </resources>

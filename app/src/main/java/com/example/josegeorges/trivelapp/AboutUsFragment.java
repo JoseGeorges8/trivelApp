@@ -4,6 +4,7 @@ package com.example.josegeorges.trivelapp;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -53,6 +54,7 @@ public class AboutUsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_about_us2, container, false);
+        getActivity().setTitle(R.string.about_us);
         recyclerView = (RecyclerView) view.findViewById(R.id.aboutUs_recyclerView);
         return view;
     }
@@ -66,6 +68,8 @@ public class AboutUsFragment extends Fragment {
         //setting up the layoutManager
         LinearLayoutManager myLayoutManager = new LinearLayoutManager(getActivity());
         myLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        //Setting up the Divider
+        RecyclerViewDivider itemDecoration = new RecyclerViewDivider(recyclerView.getContext(), R.drawable.recycler_divider);
         //populating packages
         populatePackages();
         //making sure that everything is set up first
@@ -73,16 +77,19 @@ public class AboutUsFragment extends Fragment {
             recyclerView.setAdapter(new SalesRepAdapter(salesReps, (MainActivity) this.getActivity()));
         }
         recyclerView.setLayoutManager(myLayoutManager);
+        recyclerView.addItemDecoration(itemDecoration);
 
     }
 
     public void populatePackages(){
+        salesReps.clear();
         String[] names = {"Jose Georges", "Nick Stajduhar"};
         String[] emails = {"josegeorges@trivelagency.com", "nickstajduhar@trivelagency.com"};
         String[] phones = {"8888888888", "222222222"};
+        String[] social = {"https://www.facebook.com/Trivel-341889966290364/", "https://www.facebook.com/Trivel-341889966290364/"};
         int[] imagesID = {R.drawable.jose, R.drawable.nick};
         for(int i = 0; i < names.length; i++){
-            SalesRep salesRep = new SalesRep(names[i], emails[i], phones[i], imagesID[i]);
+            SalesRep salesRep = new SalesRep(names[i], emails[i], phones[i], social[i], imagesID[i]);
             salesReps.add(salesRep);
         }
     }

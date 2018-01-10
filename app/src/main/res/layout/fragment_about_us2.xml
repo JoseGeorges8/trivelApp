@@ -14,7 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
-                android:text="TITLE"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/title_size"
+                android:text="ABOUT TRIVEL"
                 android:padding="@dimen/padding"
                 android:id="@+id/aboutUs_title"
                 android:layout_width="match_parent"
@@ -36,16 +38,20 @@
                 card_view:cardCornerRadius="4dp">
 
                 <TextView
-                    android:padding="@dimen/padding"
-                    android:text="@string/aboutus_description"
                     android:id="@+id/aboutUs_description"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:lineSpacingExtra="8sp"
+                    android:padding="@dimen/padding"
+                    android:text="@string/aboutus_description" />
             </android.support.v7.widget.CardView>
 
             <TextView
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/subtitle_size"
+                android:text="CONTACT OUR SALES REPRESENTATIVES"
                 android:padding="@dimen/padding"
                 android:id="@+id/aboutUs_salesRep_Title"
                 android:layout_width="match_parent"
@@ -53,7 +59,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/aboutUs_description_card_view"
-                android:text="SALES REP" />
+                 />
 
             <android.support.v7.widget.CardView
                 android:layout_marginLeft="@dimen/cards_sides_margin"

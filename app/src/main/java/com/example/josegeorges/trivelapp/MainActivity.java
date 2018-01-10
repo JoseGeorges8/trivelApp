@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.github.clans.fab.FloatingActionButton;
+import com.mikepenz.aboutlibraries.Libs;
+import com.mikepenz.aboutlibraries.LibsBuilder;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -33,7 +35,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -113,8 +114,16 @@ public class MainActivity extends AppCompatActivity
             transaction.replace(R.id.content, new AboutUsFragment());
             transaction.commit();
         } else if (id == R.id.nav_credits) {
-                //TODO: Create a fragment for credits section
+            new LibsBuilder()
+                    .withLibraries("floatingactionbutton", "circleimageview", "pageindicatorview", "logolicense", "picasso")
+                    .withAutoDetect(false)
+                    .withLicenseShown(true)
+                    .withVersionShown(true)
+                    .withActivityTitle("Credits")
+                    .withActivityStyle(Libs.ActivityStyle.LIGHT_DARK_TOOLBAR)
+                    .start(this);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
