@@ -12,6 +12,7 @@ import com.example.josegeorges.trivelapp.MainActivity;
 import com.example.josegeorges.trivelapp.R;
 import com.example.josegeorges.trivelapp.TripPackage;
 import com.example.josegeorges.trivelapp.TripViewFragment;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -51,7 +52,8 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageViewHolder> {
 
     @Override
     public void onBindViewHolder(PackageViewHolder holder, final int position) {
-        holder.getPackageIcon().setImageResource(list.get(position).getImagesId()[0]);
+       // holder.getPackageIcon().setImageResource(list.get(position).getImagesId()[0]);
+        Picasso.with(activity.getBaseContext()).load(list.get(position).getImagesId()[0]).resize(50,25).centerCrop().into(holder.getPackageIcon());
         holder.getPackageTitle().setText(list.get(position).getTitle());
         holder.getPackageDescription().setText(list.get(position).getDescription());
         holder.getPackagePrice().setText(list.get(position).getPrice());
