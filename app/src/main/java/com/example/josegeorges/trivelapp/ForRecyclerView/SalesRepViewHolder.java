@@ -1,5 +1,6 @@
 package com.example.josegeorges.trivelapp.ForRecyclerView;
 
+import android.provider.ContactsContract;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,6 +18,7 @@ public class SalesRepViewHolder extends RecyclerView.ViewHolder {
     private TextView salesRep_name;
     private ImageView salesRep_phone;
     private ImageView salesRep_email;
+    private ImageView salesRep_social;
 
     public SalesRepViewHolder(View itemView) {
         super(itemView);
@@ -25,6 +27,7 @@ public class SalesRepViewHolder extends RecyclerView.ViewHolder {
         salesRep_name = (TextView) itemView.findViewById(R.id.salesrep_name);
         salesRep_phone = (ImageView) itemView.findViewById(R.id.salesrep_call);
         salesRep_email = (ImageView) itemView.findViewById(R.id.salesrep_email);
+        salesRep_social = (ImageView) itemView.findViewById(R.id.salesrep_social);
 
     }
 
@@ -50,6 +53,11 @@ public class SalesRepViewHolder extends RecyclerView.ViewHolder {
 
     public void setSalesRep_phone(ImageView salesRep_phone) {
         this.salesRep_phone = salesRep_phone;
+    }
+
+    public ImageView getSalesRep_social(){return salesRep_social;}
+    public  void  setSalesRep_social(ImageView salesRep_social){
+        this.salesRep_social = salesRep_social;
     }
 
     public ImageView getSalesRep_email() {

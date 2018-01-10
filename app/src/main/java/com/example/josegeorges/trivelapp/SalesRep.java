@@ -11,13 +11,15 @@ public class SalesRep {
     private String name;
     private String email;
     private String phone;
+    private String social;
     private int imageID;
 
     //constructor
-    public SalesRep(String name, String email, String phone, int imageID){
+    public SalesRep(String name, String email, String phone, String social, int imageID){
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.social = social;
         this.imageID = imageID;
     }
 
@@ -40,6 +42,14 @@ public class SalesRep {
 
     public String getPhone() {
         return phone;
+    }
+
+    public String getSocial() {
+        return phone;
+    }
+
+    public void setSocial(String social) {
+        this.social = social;
     }
 
     public void setPhone(String phone) {
