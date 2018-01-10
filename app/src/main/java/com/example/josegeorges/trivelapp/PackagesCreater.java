@@ -53,7 +53,8 @@ public class PackagesCreater {
                         " bring it to the beach and sit in one of our many luxury beach recliners. " +
                         "Spend the day lounging on the beach, enjoying drinks and enjoying the beautiful sunset over the water",
                 //Description 9
-                "description9",
+                "Experience a culture shock stay in an authentic themed hotel. Fun to learn and experience with the whole family. " +
+                        "Come enjoy this new wonder. We guarantee everyone in the family will enjoy it here!",
                 //Description 10
                 "Great Hawk Lodge is a great family location with a huge indoor water park. By coming to our resort have all the family time " +
                         "you need by hanging out in our arcade, going on a safari, riding rides in our water park, and going to dinner in one of our" +
@@ -156,7 +157,11 @@ public class PackagesCreater {
                 "\u2022 Shop in markets\n" +
                 "\u2022 Snorkeling\n" +
                 "\u2022 Boat Tour\n"};
-        String[] activities9 = {"3"};
+        String[] activities9 = {"\u2022 Participate in local events\n" +
+                "\u2022 Go to amusement parks\n" +
+                "\u2022 Underground Markets\n" +
+                "\u2022 Cultural Restaurants\n" +
+                "\u2022 Visit historical sites\n"};
         String[] activities10 = {"\u2022 Ride rides\n" +
                 "\u2022 Huge Water Park\n" +
                 "\u2022 Amazing Arcade\n" +
@@ -352,7 +357,7 @@ public class PackagesCreater {
                 //Longitude 8
                 "-77.928686",
                 //Longitude 9
-                "9",
+                "114.173800",
                 //Longitude 10
                 "-89.771905",
                 //Longitude 11
@@ -391,7 +396,7 @@ public class PackagesCreater {
                 //Latitude 8
                 "24.895402",
                 //Latitude 9
-                "9",
+                "22.300518",
                 //Latitude 10
                 "43.569993",
                 //Latitude 11
@@ -422,8 +427,8 @@ public class PackagesCreater {
         int[] imagesIds5 = {R.drawable.trip5_pic1, R.drawable.trip5_pic2, R.drawable.trip5_pic3, R.drawable.trip5_pic4, R.drawable.trip5_pic5};
         int[] imagesIds6 = {R.drawable.trip6_pic1, R.drawable.trip6_pic2, R.drawable.trip6_pic3, R.drawable.trip6_pic4, R.drawable.trip6_pic5};
         int[] imagesIds7 = {R.drawable.trip7_pic1, R.drawable.trip7_pic2, R.drawable.trip7_pic3, R.drawable.trip7_pic4, R.drawable.trip7_pic5};
-        int[] imagesIds8 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
-        int[] imagesIds9 = {R.drawable.trip2_pic1, R.drawable.trip2_pic2, R.drawable.trip2_pic3, R.drawable.trip2_pic4, R.drawable.trip2_pic5};
+        int[] imagesIds8 = {R.drawable.trip8_pic1, R.drawable.trip8_pic2, R.drawable.trip8_pic3, R.drawable.trip8_pic4, R.drawable.trip8_pic5};
+        int[] imagesIds9 = {R.drawable.trip9_pic1, R.drawable.trip9_pic2, R.drawable.trip9_pic3, R.drawable.trip9_pic4, R.drawable.trip9_pic5};
         int[] imagesIds10 = {R.drawable.trip10_pic1, R.drawable.trip10_pic2, R.drawable.trip10_pic3, R.drawable.trip10_pic4, R.drawable.trip1_pic5};
         int[] imagesIds11 = {R.drawable.trip11_pic1, R.drawable.trip11_pic2, R.drawable.trip11_pic3, R.drawable.trip11_pic4, R.drawable.trip11_pic5};
         int[] imagesIds12 = {R.drawable.trip12_pic1, R.drawable.trip12_pic2, R.drawable.trip12_pic3, R.drawable.trip12_pic4, R.drawable.trip12_pic5};
