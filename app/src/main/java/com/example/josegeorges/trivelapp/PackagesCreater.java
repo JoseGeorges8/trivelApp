@@ -64,120 +64,26 @@ public class PackagesCreater {
                 //Description 20
                 activity.getString(R.string.description20)};
         //activities for each object
-        String[] activities = {"\u2022 Snorkeling\n \u2022 Tour ancient ruins\n \u2022 Visit amazing Dinosaur Park\n \u2022 Visit ancient pyramids\n \u2022 Take a tour of the town and visit local shops\n"};
-        String[] activities2 = {"\u2022 Bar hopping by the beach\n" +
-                "\u2022 Historical tour of the city\n" +
-                "\u2022 Bird Watching\n" +
-                "\u2022 Romantic boat tour\n" +
-                "\u2022 Local experience\n"};
-        String[] activities3 = {"\u2022 Visit locals on a city tour\n" +
-                "\u2022 Catamaran boat tours\n" +
-                "\u2022 Visit the aquarium\n" +
-                "\u2022 Visit ancient ruins\n" +
-                "\u2022 Nightclubbing\n"};
-        String[] activities4 = {"\u2022 Plantation Tour\n" +
-                "\u2022 Party on Alcohol St.\n" +
-                "\u2022 Steam boat ride\n" +
-                "\u2022 Segway Tour\n" +
-                "\u2022 Old City Tour\n"};
-        String[] activities5 = {"\u2022 Water Park\n" +
-                "\u2022 Beach Tours\n" +
-                "\u2022 Outdoor movie\n" +
-                "\u2022 Rent a classic car\n" +
-                "\u2022 Swim with the dolphins\n"};
-        String[] activities6 = {"\u2022 Helicopter Tour\n" +
-                "\u2022 Day at the amusement park\n" +
-                "\u2022 Music festival\n" +
-                "\u2022 MAD National Park\n"};
-        String[] activities7 = {"\u2022 Visit a casino\n" +
-                "\u2022 Watch a show\n" +
-                "\u2022 Tour the city\n" +
-                "\u2022 Visit the Canyon\n" +
-                "\u2022 Go to a drive-in\n"};
-        String[] activities8 = {"\u2022 Swimming in the ocean\n" +
-                "\u2022 Tour the town\n" +
-                "\u2022 Shop in markets\n" +
-                "\u2022 Snorkeling\n" +
-                "\u2022 Boat Tour\n"};
-        String[] activities9 = {"\u2022 Participate in local events\n" +
-                "\u2022 Go to amusement parks\n" +
-                "\u2022 Underground Markets\n" +
-                "\u2022 Cultural Restaurants\n" +
-                "\u2022 Visit historical sites\n"};
-        String[] activities10 = {"\u2022 Ride rides\n" +
-                "\u2022 Huge Water Park\n" +
-                "\u2022 Amazing Arcade\n" +
-                "\u2022 Safari Adventure\n" +
-                "\u2022 Variety of Restaurants\n" +
-                "\u2022 Play miniature golf.\n"};
-        String[] activities11 = {"\u2022 Excursion to the lighthouse\n" +
-                "\u2022 Yoga in the beach\n" +
-                "\u2022 Aerobics at the pool area\n" +
-                "\u2022 Bingo every night after exclusive night theatre show\n" +
-                "\u2022 All night disco club for grown ups!\n" +
-                "\u2022 Movie theatre with different functions everyday.\n"+
-                "\u2022 Multiple aquatic games at the pool area.\n"+
-                "\u2022 Rent of bikes.\n"+
-                "\u2022 Free access to the hotel’s gym.\n"+
-                "\u2022 Karaoke Thursday!\n"};
-        String[] activities12 = {"\u2022 Massages\n" +
-                "\u2022 Excursion through the beautiful seas outside Greece\n" +
-                "\u2022 Scuba diving classes\n" +
-                "\u2022 Hiking Excursion\n" +
-                "\u2022 Cooking class and wine testing\n"};
-        String[] activities13 = {"\u2022 Gym classes scheduled.\n" +
-                "\u2022 Personal Massages.\n" +
-                "\u2022 Live bands inside the hotel bar.\n" +
-                "\u2022 Excursion to get to know London for one day in a bus.\n" +
-                "\u2022 Room service.\n"};
-        String[] activities14 = {"\u2022 Water Motorcycle rent.\n" +
-                "\u2022 Pool recreation.\n" +
-                "\u2022 Beach activities\n" +
-                "\u2022 All night disco club for grown ups!\n" +
-                "\u2022 Movie theatre with different functions everyday.\n"+
-                "\u2022 Free access to the hotel’s gym\n"+
-                "\u2022 Scuba diving lessons\n"+
-                "\u2022 Gaming room for kids\n"};
-        String[] activities15 = {"\u2022 Water Rides\n" +
-                "\u2022 Theater\n" +
-                "\u2022 Stores to shop\n" +
-                "\u2022 Restaurants with different types of food\n" +
-                "\u2022 3 stops in Puerto Rico, Dominican Republic and Cuba.\n" +
-                "\u2022 Gym (may charge for usage)\n"+
-                "\u2022 Night Club with different theme nights\n"+
-                "\u2022 Karaoke Bar\n"+
-                "\u2022 Casino.\n"+
-                "\u2022 Pool Activities\n"};
-        String[] activities16 = {"\u2022 Scuba diving lessons.\n" +
-                "\u2022 Room Service.\n" +
-                "\u2022 Restaurants.\n" +
-                "\u2022 Bars."};
-        String[] activities17 = {"\u2022 Scuba diving lessons\n" +
-                "\u2022 Water Motorcycle Renting\n" +
-                "\u2022 Restaurants all over the island\n" +
-                "\u2022 Bars all over the island\n" +
-                "\u2022 Night Shows\n" +
-                "\u2022 Food theme on each restaurant per day\n"+
-                "\u2022 Water rides\n"+
-                "\u2022 Bike renting\n"+
-                "\u2022 Casino.\n"+
-                "\u2022 Pool Activities\n"};
-        String[] activities18 = {"\u2022 Scuba diving lessons\n" +
-                "\u2022 Water Motorcycle Renting\n" +
-                "\u2022 Fancy Restaurants\n" +
-                "\u2022 Night Bar with Karaoke nights\n" +
-                "\u2022 Night Shows\n" +
-                "\u2022 Golf Court\n"};
-        String[] activities19 = {"\u2022 Excursions through Jungle\n" +
-                "\u2022 Spa\n" +
-                "\u2022 Sauna\n" +
-                "\u2022 Massages\n"};
-        String[] activities20 = {"\u2022 Room Service\n" +
-                "\u2022 Spa\n" +
-                "\u2022 Sauna\n" +
-                "\u2022 Massages\n"+
-                "\u2022 Casino\n"+
-                "\u2022 Live Band on Fridays inside the Restaurant\n"};
+        String[] activities = {activity.getString(R.string.activities1)};
+        String[] activities2 = {activity.getString(R.string.activities2)};
+        String[] activities3 = {activity.getString(R.string.activities3)};
+        String[] activities4 = {activity.getString(R.string.activities4)};
+        String[] activities5 = {activity.getString(R.string.activities5)};
+        String[] activities6 = {activity.getString(R.string.activities6)};
+        String[] activities7 = {activity.getString(R.string.activities7)};
+        String[] activities8 = {activity.getString(R.string.activities8)};
+        String[] activities9 = {activity.getString(R.string.activities9)};
+        String[] activities10 = {activity.getString(R.string.activities10)};
+        String[] activities11 = {activity.getString(R.string.activities11)};
+        String[] activities12 = {activity.getString(R.string.activities12)};
+        String[] activities13 = {activity.getString(R.string.activities13)};
+        String[] activities14 = {activity.getString(R.string.activities14)};
+        String[] activities15 = {activity.getString(R.string.activities15)};
+        String[] activities16 = {activity.getString(R.string.activities16)};
+        String[] activities17 = {activity.getString(R.string.activities17)};
+        String[] activities18 = {activity.getString(R.string.activities18)};
+        String[] activities19 = {activity.getString(R.string.activities19)};
+        String[] activities20 = {activity.getString(R.string.activities20)};
 
 
         ArrayList<String[]> arrayListActivities = new ArrayList<>();
