@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrivelApp</string>
+    <string name="testing_translation">Espanol</string>
+    <string name="description1">le cambie el idioma a este</string>
+</resources>

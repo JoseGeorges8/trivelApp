@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:configChanges="locale|orientation"
             android:name=".MainActivity"
             android:label="@string/app_title"
             android:theme="@style/AppTheme.NoActionBar">
