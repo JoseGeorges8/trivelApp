@@ -64,11 +64,7 @@ public class PackagesCreater {
                 //Description 20
                 activity.getString(R.string.description20)};
         //activities for each object
-        String[] activities = {"\u2022 Snorkeling\n" +
-                "\u2022 Tour ancient ruins\n" +
-                "\u2022 Visit amazing Dinosaur Park\n" +
-                "\u2022 Visit ancient pyramids\n" +
-                "\u2022 Take a tour of the town and visit local shops\n"};
+        String[] activities = {"\u2022 Snorkeling\n \u2022 Tour ancient ruins\n \u2022 Visit amazing Dinosaur Park\n \u2022 Visit ancient pyramids\n \u2022 Take a tour of the town and visit local shops\n"};
         String[] activities2 = {"\u2022 Bar hopping by the beach\n" +
                 "\u2022 Historical tour of the city\n" +
                 "\u2022 Bird Watching\n" +
@@ -207,45 +203,45 @@ public class PackagesCreater {
         arrayListActivities.add(activities20);
 
         //duration for each object
-        String[] duration = {"4 Nights and 5 Days",
+        String[] duration = {activity.getString(R.string.duration1),
                 //Duration 2
-                "3 Nights and 4 Days",
+                activity.getString(R.string.duration2),
                 //Duration 3
-                "4 Nights and 5 Days",
+                activity.getString(R.string.duration3),
                 //Duration 4
-                "2 Nights and 3 Days",
+                activity.getString(R.string.duration4),
                 //Duration 5
-                "3 Nights and 4 Days",
+                activity.getString(R.string.duration5),
                 //Duration 6
-                "4 Nights and 5 Days",
+                activity.getString(R.string.duration6),
                 //Duration 7
-                "6 Nights and 7 Days",
+                activity.getString(R.string.duration7),
                 //Duration 8
-                "5 Nights and 6 Days",
+                activity.getString(R.string.duration8),
                 //Duration 9
-                "4 Nights and 5 Days",
+                activity.getString(R.string.duration9),
                 //Duration 10
-                "2 Nights and 3 Days",
+                activity.getString(R.string.duration10),
                 //Duration 11
-                "5 Nights and 6 Days.",
+                activity.getString(R.string.duration11),
                 //Duration 12
-                "3 Nights and 4 Days.",
+                activity.getString(R.string.duration12),
                 //Duration 13
-                "1 Night and 2 Days.",
+                activity.getString(R.string.duration13),
                 //Duration 14
-                "5 Nights and 6 Days.",
+                activity.getString(R.string.duration14),
                 //Duration 15
-                "3 Nights and 4 Days.",
+                activity.getString(R.string.duration15),
                 //Duration 16
-                "2 nights and 3 days.",
+                activity.getString(R.string.duration16),
                 //Duration 17
-                "5 nights and 6 days.",
+                activity.getString(R.string.duration17),
                 //Duration 18
-                "4 nights and 5 days.",
+                activity.getString(R.string.duration18),
                 //Duration 19
-                "4 nights and 5 days.",
+                activity.getString(R.string.duration19),
                 //Duration 20
-                "2 nights and 3 days."};
+                activity.getString(R.string.duration20)};
         //prices for each object
         String[] prices = {"$5000",
                 //Price 2
