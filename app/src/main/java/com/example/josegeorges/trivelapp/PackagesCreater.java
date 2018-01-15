@@ -16,7 +16,7 @@ public class PackagesCreater {
     * This packages are going to the adapter to inflate the layout.
     *
     * */
-    public static ArrayList<TripPackage> populatePackages(ArrayList<TripPackage> tripPackages){
+    public static ArrayList<TripPackage> populatePackages(ArrayList<TripPackage> tripPackages, MainActivity activity){
         tripPackages.clear();
         //title for each object
         String[] titles = {"Lossy Villa", "Puerto Viana Resort", "Now Dominicano Resort",
@@ -24,9 +24,7 @@ public class PackagesCreater {
                 "High Blue Resort", "Now Viaje", "Great Hawk Lodge", "Dunas Resort", "White Passion", "Royal Crown", "Vida Rica", "Caribbean Cruise", "Wonders"
                 , "Exotica", "Royal Palace", "Jungle Wild", "The Class"};
         //description for each object
-        String[] descriptions = {"Lossy Villa is a beautiful all inclusive resort. While here take the chance to visit" +
-                "one of our 4 bars. As well as try one of the 3 on site pools. Swim up to the bar and watch the sunset over the" +
-                " ocean, while enjoying a cold drink from one of our swim up bars",
+        String[] descriptions = {activity.getString(R.string.description1),
                 //Description 2
                 "Come visit this beautiful tropical resort. It is the perfect honeymoon or family location with its magnificent pools" +
                         " and views. Visit many of the children play areas as well as the bars for the adults. There Puerto Viana" +
