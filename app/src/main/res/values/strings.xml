@@ -79,5 +79,11 @@
     <string name="fab3">Add trip to your Calendar</string>
     <string name="fab1_1">Add</string>
     <string name="fab1_2">to wishlist</string>
+    <string name="toast_removed">was removed from the wishlist</string>
+    <string name="toast_added">was added to the wishlist</string>
+    <string name="fab1_3">Remove</string>
+    <string name="fab1_4">from the wishlist</string>
+    <string name="about_trivel">ABOUT TRIVEL</string>
+    <string name="contact_our_sales_representatives">CONTACT OUR SALES REPRESENTATIVES</string>
 
 </resources>

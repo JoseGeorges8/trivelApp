@@ -9,7 +9,7 @@
     <string name="description5">Ven y experimenta the este asombroso todo incluido resort con temática acuática. Visita de su parque the agua o relájate en una de sus 4 piscinas. Hay inmensa cantidad the opciones para toda la familia, así como también bares en el area de la piscina para que los adultos puedan relajarse.</string>
     <string name="description6">Disfruta un resort completamente natural que filtra su agua y usa viento para generar su energía! Descubre la belleza presentada cuando te quedas aquí. Una vez que la descubras, no querrás dejarla ir!</string>
     <string name="description7">Este es el destino perfecto para las mujeres de la casa. Glitter Canyon Resort es un todo incluido spa. Aunque sea perfecto para las mujeres de la casa, hay actividades para todos, y tenemos diferentes paquetes que lo reflejan. Desde el mejor lugar para luna de miel, hasta para relajarte con tus chicos, este resort lo da todo.</string>
-    <string name="action_settings">Ingles</string>
+    <string name="action_settings">Inglés</string>
     <string name="description8">Ven y enamorate the nuestro paquete en este todo incluido resort de playa. Disfruta the una bebida de uno de sus 5 bares, tráetela contigo a la playa y disfruta en uno de sus hermosas sillas. Pasa el día relajandote en la playa, y el hermoso atardecer por encima del océano.</string>
     <string name="description9">Experimenta un choque cultural en un auténtico hotel temático. Diversión para aprender y experimentar con toda la familia. Ven a disfrutar de esta nueva maravilla. ¡Garantizamos que todos en la familia lo disfrutarán aquí!</string>
     <string name="description10">Great Hawk Lodge es una excelente ubicación familiar con un enorme parque acuático cubierto. Al venir a nuestro complejo, tenga todo el tiempo que necesite para pasar un rato en nuestra galería, haciendo safaris, cabalgando en nuestro parque acuático e ir a cenar a uno de nuestros 5 restaurantes. Hay algo para que todos en la familia hagan y una excelente manera de sacar a su familia de esos teléfonos y en el agua. Reserve Hoy</string>
@@ -52,4 +52,18 @@
     <string name="fab3">Agregar Viaje al Calendario</string>
     <string name="fab1_1">"Agregar "</string>
     <string name="fab1_2">" a tus Favoritos"</string>
+    <string name="about_us">"Sobre Nosotros "</string>
+    <string name="credits">"Créditos "</string>
+    <string name="isEmpty">¡Aún no tienes paquetes favoritos!</string>
+    <string name="goToPackages">Chequea nuestros paquetes</string>
+    <string name="wish_list">Favoritos</string>
+    <string name="our_packages">Nuestros Paquetes</string>
+    <string name="app_subtitle">Agencia de Viajes</string>
+    <string name="toast_removed">" fue eliminado de favoritos"</string>
+    <string name="toast_added">" fue agregado a favoritos"</string>
+    <string name="fab1_3">"Elimina "</string>
+    <string name="fab1_4">de tus favoritos</string>
+    <string name="aboutus_description">Trivel fue formado por Jose Georges y Nick Stajduhar. Ambos estudiantes de segundo año de desarrollo de aplicaciones móviles     La idea de Trivel era hacer una aplicación de agencia de viajes que fuera fácil de usar y que fuera atractiva gráficamente al mismo tiempo.     Trivel explotó rápidamente y se convirtió en una compañía increíble para crear viajes a todas las familias y parejas con solo tocar un dedo.</string>
+    <string name="about_trivel">SOBRE TRIVEL</string>
+    <string name="contact_our_sales_representatives">" CONTACTE A NUESTROS REPRESENTANTES DE VENTAS"</string>
 </resources>

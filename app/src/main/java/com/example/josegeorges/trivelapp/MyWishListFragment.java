@@ -67,14 +67,14 @@ public class MyWishListFragment extends Fragment {
             }
         }
         if(contained) {
-            fab.setLabelText("Add " + tripPackage.getTitle() + " to wishlist");
-            Toast.makeText(getActivity(), tripPackage.getTitle() + " was removed from the wishlist", Toast.LENGTH_SHORT).show();
+            fab.setLabelText(getString(R.string.fab1_1) + tripPackage.getTitle() + getString(R.string.fab1_2));
+            Toast.makeText(getActivity(), tripPackage.getTitle() + getString(R.string.toast_removed), Toast.LENGTH_SHORT).show();
         }
         else {
             tripPackages.add(tripPackage);
             adapter.notifyDataSetChanged();
-            fab.setLabelText("Remove " + tripPackage.getTitle() + " from the wishlist");
-            Toast.makeText(getActivity(), tripPackage.getTitle() + " was added to the wishlist", Toast.LENGTH_SHORT).show();
+            fab.setLabelText(getString(R.string.fab1_3) + tripPackage.getTitle() + getString(R.string.fab1_4));
+            Toast.makeText(getActivity(), tripPackage.getTitle() + getString(R.string.toast_added), Toast.LENGTH_SHORT).show();
         }
     }
 
