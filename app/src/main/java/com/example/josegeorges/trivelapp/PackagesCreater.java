@@ -26,95 +26,43 @@ public class PackagesCreater {
         //description for each object
         String[] descriptions = {activity.getString(R.string.description1),
                 //Description 2
-                "Come visit this beautiful tropical resort. It is the perfect honeymoon or family location with its magnificent pools" +
-                        " and views. Visit many of the children play areas as well as the bars for the adults. There Puerto Viana" +
-                        " Resort",
+                activity.getString(R.string.description2),
                 //Description 3
-                "Amazing tropical destination perfect for your next vacation. Every room has a perfect view of the ocean or the forest," +
-                        "no matter what you cant go wrong. Just sit back and relax while we take care of everything with our all inclusive deals.",
+                activity.getString(R.string.description3),
                 //Description 4
-                "Stay in this beautiful resort full of rich history. Experience the historic area, top it off by staying in an old plantation" +
-                        " which has been transformed into our rustic resort. Experience all the land has to offer as well as the other attractions.",
+                activity.getString(R.string.description4),
                 //Description 5
-                "Come experience this breathtaking water themed all inclusive resort. Visit our water park or one of our 4 pools. There are so many" +
-                        " family friendly options as well as the multiple bars located by the pools for all the adults to enjoy.",
+                activity.getString(R.string.description5),
                 //Description 6
-                "Enjoy an all nature resort that filters all their water and uses wind to generate power. " +
-                        "Discover the untold beauty presented when staying here. Once you experience it you will" +
-                        " never want to leave.",
+                activity.getString(R.string.description6),
                 //Description 7
-                "This is the perfect destination for women. Glitter Canyon Resort is an all inclusive spa." +
-                        " There is something for everyone here. We have different packages for everyone. This os the perfect" +
-                        " honeymoon destination or just to get away from the kids.",
+                activity.getString(R.string.description7),
                 //Description 8
-                "Come fall in love with our all inclusive beach resort. Grab a drink from one of our 5 bars," +
-                        " bring it to the beach and sit in one of our many luxury beach recliners. " +
-                        "Spend the day lounging on the beach, enjoying drinks and enjoying the beautiful sunset over the water",
+                activity.getString(R.string.description8),
                 //Description 9
-                "Experience a culture shock stay in an authentic themed hotel. Fun to learn and experience with the whole family. " +
-                        "Come enjoy this new wonder. We guarantee everyone in the family will enjoy it here!",
+                activity.getString(R.string.description9),
                 //Description 10
-                "Great Hawk Lodge is a great family location with a huge indoor water park. By coming to our resort have all the family time " +
-                        "you need by hanging out in our arcade, going on a safari, riding rides in our water park, and going to dinner in one of our" +
-                        " 5 resturants. There's something for everyone in the family to do and a great way to get your family off those phones and out in the water." +
-                        " Book Today",
+                activity.getString(R.string.description10),
                 //Description 11
-                "Spend some time in this luxury resort located in the Margarita Island in Venezuela. " +
-                        "With more than 3 restaurants, you get access to all the meals and snacks the whole day. " +
-                        "Also, you have unlimited drinks included! (both alcoholic and non-alcoholic, exclusion applies). " +
-                        "Relax and enjoy the quiet ocean on their white sand beach, with view to the island/’s lighthouse. " +
-                        "This trip is perfect if you are looking to just get away of your daily routine.",
+                activity.getString(R.string.description11),
                 //Description 12
-                "You will feel like living a royal life staying at this luxury greek hotel. " +
-                        "Located in the beautiful city of Santorini,  you are going to be able to get " +
-                        "away from your responsibilities and escape to this palace of pleasure and relax. " +
-                        "Start your day with a beautiful blue ocean view, and stay all day enjoying of massages, " +
-                        "beautiful pools and the nice sound of silence.",
+                activity.getString(R.string.description12),
                 //Description 13
-                "Looking to spend the night on a quick business trip? or maybe pass the night with your partner " +
-                        "while visiting London? Then this package is for you! Stay the night at Royal Crown, one " +
-                        "of the most luxury hotels in London to stay, with first class restaurants, to indoor pool" +
-                        " and indoor gym.",
+                activity.getString(R.string.description13),
                 //Description 14
-                "Enjoy of the most beautiful beaches in Cancun, Mexico and stay in one of the most luxurious hotels in Cancun." +
-                        " Vida Rica is known for all the activities they provide on their near beaches, combining with" +
-                        " their awesome restaurants and enjoyable night bats. For the kids, the hotel also provides many" +
-                        " activities like pool recreation and many activities more! Don/’t forget to do some scuba " +
-                        "diving on the cleanest beaches and ride water motorcycles!",
+                activity.getString(R.string.description14),
                 //Description 15
-                "Travel through the Caribbean on one of the biggest cruise in the world. " +
-                        "With more than 1,000 foot long, the Caribbean Cruise carries up to 5,000 guests! " +
-                        "It has all the activities your family will love to enjoy. From water slides, to" +
-                        " relaxing pools, the Caribbean Cruise has everything you need to spend one of the " +
-                        "best summer travels of your life! Also, if you are tired of spending the time outside " +
-                        "on the sun, the Cruise has many floors with different activities each. From Casinos, to " +
-                        "fancy restaurants and a theatre, Caribbean Cruise will not bored you or your family! The " +
-                        "Cruise Caribbean sails from Miami, Florida and passes through the Caribbean islands, making" +
-                        " stops in Puerto Rico, Dominican Republic and Cuba!",
+                activity.getString(R.string.description15),
                 //Description 16
-                "Wonders is one of the most luxury hotels in the world. Located underwater, " +
-                        "Wonders offers their guests a stay they/’ll never forget. Eat and sleep while " +
-                        "watching the relaxing waves and creatures of the deep ocean. It is perfect for a " +
-                        "honey moon or just a simple trip with your partner!",
+                activity.getString(R.string.description16),
                 //Description 17
-                "Spend your family vacations in this amazing island resort. Exotica holds up to 6,000" +
-                        " guests and its known for its unlimited activities. with our package, you get all" +
-                        " in food and drinks! Kids will love the kids area in this resort where they have all " +
-                        "the recreational activities you can imagine! ",
+                activity.getString(R.string.description17),
                 //Description 18
-                "Amazing resort for business trips. This lovely resort in the Margarita Island, Venezuela," +
-                        " offers a golf court to spend some time on! you will also have 1st class rooms, amazing" +
-                        " massages, a beautiful beach and a luxury pool! this package is recommended for golf " +
-                        "lovers ",
+                activity.getString(R.string.description18),
                 //Description 19
-                "Feeling like going for an adventure? Then this exiting jungle resort is for you! explore" +
-                        " the jungles of Thailand and relax at the same time in Jungle Wild, you will be able " +
-                        "to travel through the jungle the day, and then get some relaxing drinks at night\n",
+                activity.getString(R.string.description19),
                 //Description 20
-                "The ultimate luxury type of life. The Class offers a 5 stars service with" +
-                        " its splendour and magnificence. Spend the best sleep on the best quality rooms." +
-                        " swim and relax on either indoor or outdoor pools. Also, eat the most classy food in" +
-                        " the world in their 1st class restaurant.\n"};
+                activity.getString(R.string.description20)};
         //activities for each object
         String[] activities = {"\u2022 Snorkeling\n" +
                 "\u2022 Tour ancient ruins\n" +
