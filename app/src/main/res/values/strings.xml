@@ -70,5 +70,14 @@
     <string name="duration18">4 Nights and 5 Days</string>
     <string name="duration19">4 Nights and 5 Days</string>
     <string name="duration20">2 Nights and 3 Days</string>
+    <string name="price_of_trip">Price of Trip:</string>
+    <string name="duration_of_trip">Duration of trip:</string>
+    <string name="description_tag">Description</string>
+    <string name="activities_tab">Activities</string>
+    <string name="upcoming_trip">Upcoming Trip</string>
+    <string name="fab2">Map</string>
+    <string name="fab3">Add trip to your Calendar</string>
+    <string name="fab1_1">Add</string>
+    <string name="fab1_2">to wishlist</string>
 
 </resources>

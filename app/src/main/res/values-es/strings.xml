@@ -43,4 +43,13 @@
     <string name="duration7">6 Noches y 7 Días</string>
     <string name="duration11">5 Noches y 6 Días</string>
     <string name="duration13">1 Noche y 2 Días</string>
+    <string name="price_of_trip">"Precio del Viaje: "</string>
+    <string name="duration_of_trip">"Duracion del Viaje: "</string>
+    <string name="description_tag">Descripcion</string>
+    <string name="activities_tab">Actividades</string>
+    <string name="upcoming_trip">Proximo Viaje</string>
+    <string name="fab2">Mapa</string>
+    <string name="fab3">Agregar Viaje al Calendario</string>
+    <string name="fab1_1">"Agregar "</string>
+    <string name="fab1_2">" a tus Favoritos"</string>
 </resources>
