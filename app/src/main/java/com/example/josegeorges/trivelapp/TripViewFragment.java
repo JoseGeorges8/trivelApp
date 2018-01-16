@@ -139,9 +139,9 @@ public class TripViewFragment extends Fragment {
         fab2 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab2);
         fab3 = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fab3);
 
-        fab1.setLabelText("Add " + title + " to wishlist");
-        fab2.setLabelText("Map");
-        fab3.setLabelText("Add trip to your Calendar");
+        fab1.setLabelText(getString(R.string.fab1_1) + title + getString(R.string.fab1_2));
+        fab2.setLabelText(getString(R.string.fab2));
+        fab3.setLabelText(getString(R.string.fab3));
 
 
         /**
@@ -192,7 +192,7 @@ public class TripViewFragment extends Fragment {
             public void onClick(View view) {
 
                 //For Calender
-                String eventTitle = "Upcoming Trip";
+                String eventTitle = getString(R.string.upcoming_trip);
                 long startMillis = 0;
                 long endMillis = 0;
                 Calendar beginTime = Calendar.getInstance();
@@ -235,12 +235,12 @@ public class TripViewFragment extends Fragment {
 
         TabHost.TabSpec spec = host.newTabSpec("Description");
         spec.setContent(R.id.description);
-        spec.setIndicator("Description");
+        spec.setIndicator(getString(R.string.description_tag));
         host.addTab(spec);
 
         spec = host.newTabSpec("Activities");
         spec.setContent(R.id.activities);
-        spec.setIndicator("Activities");
+        spec.setIndicator(getString(R.string.activities_tab));
         host.addTab(spec);
 
         //animating the tabs
@@ -254,8 +254,8 @@ public class TripViewFragment extends Fragment {
 
         titleText.setText(title);
         descriptionText.setText(description);
-        priceText.setText("Price of Trip: " + price);
-        durText.setText("Duration of trip: " + duration);
+        priceText.setText(getString(R.string.price_of_trip) + price);
+        durText.setText(getString(R.string.duration_of_trip) + duration);
 
         StringBuilder builder = new StringBuilder();
         for(String s : activities) {

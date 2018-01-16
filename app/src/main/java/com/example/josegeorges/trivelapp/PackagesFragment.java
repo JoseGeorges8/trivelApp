@@ -66,7 +66,7 @@ public class PackagesFragment extends Fragment {
         //Setting up the Divider
         RecyclerViewDivider itemDecoration = new RecyclerViewDivider(recyclerView.getContext(), R.drawable.recycler_divider);
         //populating packages
-        PackagesCreater.populatePackages(tripPackages);
+        PackagesCreater.populatePackages(tripPackages, (MainActivity) getActivity());
         //making sure that everything is set up first
         if (tripPackages.size() > 0 & recyclerView != null) {
             recyclerView.setAdapter(new PackageAdapter(tripPackages, (MainActivity) this.getActivity()));

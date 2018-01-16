@@ -1,10 +1,15 @@
 package com.example.josegeorges.trivelapp;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +24,8 @@ import com.github.clans.fab.FloatingActionButton;
 import com.mikepenz.aboutlibraries.Libs;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         PackagesFragment.OnFragmentInteractionListener,
@@ -28,6 +35,12 @@ public class MainActivity extends AppCompatActivity
 
     //for managing fragments
     FragmentManager fm;
+
+    //shared preferences usage. For language setting
+    public static final String PREFS_NAME = "LANGUAGE_PREFERENCES";
+    public static final String PREFS_LANG = "LANGUAGE";
+    public static String lang = "en";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +65,10 @@ public class MainActivity extends AppCompatActivity
         //starting fragment
         fm.beginTransaction().replace(R.id.content, new AboutUsFragment()).commit();
 
+        //adding the two languages the app supports to the sharedpreferences
+        SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+        editor.putString(PREFS_LANG, lang);
+        editor.apply();
     }
 
     @Override
@@ -80,10 +97,50 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            //We check the sharedPreferences to see what language code we have on at the moment.
+            SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+            SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+            String restoredText = prefs.getString(PREFS_LANG, null);
+            if (restoredText != null) {
+                if(lang.equals("en")){
+                    Log.d("COMPARING", "it is true");
+                    lang = "es";
+                    editor.putString(PREFS_LANG, lang);
+                    editor.apply();
+                    setLocale("es");
+                    Log.d("THIS", "Changed " + getResources().getString(R.string.testing_translation));
+
+                }else{
+                    Log.d("COMPARING", "it is false");
+                    lang = "en";
+                    editor.putString(PREFS_LANG, lang);
+                    editor.apply();
+                    setLocale("en");
+                    Log.d("THIS", "Changed " + getResources().getString(R.string.testing_translation));
+
+                }
+            }
+
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * This method changes the app language
+     * @param lang language code
+     */
+    public void setLocale(String lang) {
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+        Intent refresh = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(refresh);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
