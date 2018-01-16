@@ -16,7 +16,7 @@
             <TextView
                 android:fontFamily="@font/roboto_medium"
                 android:textSize="@dimen/title_size"
-                android:text="ABOUT TRIVEL"
+                android:text="@string/about_trivel"
                 android:padding="@dimen/padding"
                 android:id="@+id/aboutUs_title"
                 android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             <TextView
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="@dimen/subtitle_size"
-                android:text="CONTACT OUR SALES REPRESENTATIVES"
+                android:text="@string/contact_our_sales_representatives"
                 android:padding="@dimen/padding"
                 android:id="@+id/aboutUs_salesRep_Title"
                 android:layout_width="match_parent"
