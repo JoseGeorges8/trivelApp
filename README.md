@@ -8,10 +8,17 @@ to a few in a younger audience that would like to travel the world before they s
 `git config --global user.email` `<<<YOUR EMAIL HERE>>>`
 
 ##Pictures Of our App
-![alt text](Mainpic1.png "Designed GUI")
-![alt text](Mainpic2.png "Designed GUI")
-![alt text](Mainpic3.png "Designed GUI")
-![alt text](Mainpic4.png "Designed GUI")
+![alt text](splashscreen.png "Designed GUI")
+![alt text](aboutus.png "Designed GUI")
+![alt text](aboutus_spanish.png "Designed GUI")
+![alt text](navdrawer.png "Designed GUI")
+![alt text](credits.png "Designed GUI")
+![alt text](wishlistempty.png "Designed GUI")
+![alt text](ourpackage.png "Designed GUI")
+![alt text](tripview.png "Designed GUI")
+![alt text](fabbutton.png "Designed GUI")
+![alt text](wishlistwithcontent.png "Designed GUI")
+
 
 
 ## Commiting Instructions
