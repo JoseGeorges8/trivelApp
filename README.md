@@ -7,16 +7,46 @@ to a few in a younger audience that would like to travel the world before they s
 
 `git config --global user.email` `<<<YOUR EMAIL HERE>>>`
 
-##Pictures Of our App
+## Pictures Of our App
+
+### Splash Screen
+
 ![alt text](splashscreen.png "Designed GUI")
+
+### About Us Page
+
 ![alt text](aboutus.png "Designed GUI")
+
+### About Us Page With Translation to Spanish On
+
 ![alt text](aboutus_spanish.png "Designed GUI")
+
+### Navigation Drawer
+
 ![alt text](navdrawer.png "Designed GUI")
+
+### Credits Page
+
 ![alt text](credits.png "Designed GUI")
+
+### Wish List Page with no content added
+
 ![alt text](wishlistempty.png "Designed GUI")
+
+### Trip Packages that the company offers
+
 ![alt text](ourpackage.png "Designed GUI")
+
+### Single Trip Package View
+
 ![alt text](tripview.png "Designed GUI")
+
+### Fab Button expanded
+
 ![alt text](fabbutton.png "Designed GUI")
+
+### Wish List Page with some content added
+
 ![alt text](wishlistwithcontent.png "Designed GUI")
 
 
